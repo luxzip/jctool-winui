@@ -1,0 +1,158 @@
+<UserControl
+    x:Class="JcTool.WinUI.Views.IrCameraView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:services="using:JcTool.WinUI.Services">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="1080"
+              Padding="32,28,32,40"
+              HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock services:Localized.Key="IrHeader.Text"
+                           Style="{StaticResource SectionTitleStyle}"
+                           FontSize="28" />
+                <Button x:Name="CaptureButton"
+                        Grid.Column="1"
+                        Click="CaptureButton_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon Glyph="&#xE722;" FontSize="15" />
+                        <TextBlock services:Localized.Key="CaptureIr.Content" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="StreamButton"
+                        Grid.Column="3"
+                        Style="{StaticResource PrimaryButtonStyle}"
+                        Click="StreamButton_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon x:Name="StreamIcon" Glyph="&#xE768;" FontSize="15" />
+                        <TextBlock x:Name="StreamLabel" services:Localized.Key="StartIrStream.Content" />
+                    </StackPanel>
+                </Button>
+                <Button x:Name="SaveButton"
+                        Grid.Column="2"
+                        IsEnabled="False"
+                        Click="SaveButton_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon Glyph="&#xE74E;" FontSize="15" />
+                        <TextBlock services:Localized.Key="SaveIrImage.Content" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+            <Grid x:Name="ContentGrid"
+                  Grid.Row="2"
+                  ColumnSpacing="16"
+                  RowSpacing="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="PreviewColumn" Width="3*" />
+                    <ColumnDefinition x:Name="SettingsColumn" Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Border Style="{StaticResource PanelBorderStyle}" Padding="12">
+                    <Grid Height="480" Background="#090A0B">
+                        <Image x:Name="PreviewImage"
+                               Stretch="Uniform" />
+                        <StackPanel x:Name="EmptyPreview"
+                                    HorizontalAlignment="Center"
+                                    VerticalAlignment="Center"
+                                    Spacing="10">
+                            <FontIcon Glyph="&#xE722;"
+                                      FontSize="38"
+                                      Foreground="{StaticResource TextSecondaryBrush}" />
+                            <TextBlock services:Localized.Key="IrPreviewEmpty.Text"
+                                       Foreground="{StaticResource TextSecondaryBrush}" />
+                        </StackPanel>
+                    </Grid>
+                </Border>
+
+                <Border x:Name="SettingsPanel"
+                        Grid.Column="1"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="15">
+                        <TextBlock services:Localized.Key="IrSettingsHeader.Text"
+                                   FontSize="17"
+                                   FontWeight="SemiBold" />
+                        <ComboBox x:Name="ResolutionPicker"
+                                  services:Localized.Key="IrResolution.Header"
+                                  SelectedIndex="0"
+                                  HorizontalAlignment="Stretch">
+                            <ComboBoxItem Content="40 × 30" />
+                            <ComboBoxItem Content="80 × 60" />
+                            <ComboBoxItem Content="160 × 120" />
+                            <ComboBoxItem Content="320 × 240" />
+                        </ComboBox>
+                        <NumberBox x:Name="ExposureBox"
+                                   services:Localized.Key="IrExposure.Header"
+                                   Value="200"
+                                   Minimum="0"
+                                   Maximum="600"
+                                   SmallChange="10"
+                                   SpinButtonPlacementMode="Compact" />
+                        <StackPanel Spacing="5">
+                            <TextBlock services:Localized.Key="IrGain.Text"
+                                       Foreground="{StaticResource TextSecondaryBrush}" />
+                            <Slider x:Name="GainSlider"
+                                    Minimum="1"
+                                    Maximum="255"
+                                    Value="1"
+                                    StepFrequency="1" />
+                        </StackPanel>
+                        <ComboBox x:Name="ColorModePicker"
+                                  services:Localized.Key="IrColorMode.Header"
+                                  SelectedIndex="0"
+                                  HorizontalAlignment="Stretch">
+                            <ComboBoxItem services:Localized.Key="IrGrayscale.Content" />
+                            <ComboBoxItem services:Localized.Key="IrNightVision.Content" />
+                            <ComboBoxItem services:Localized.Key="IrInfrared.Content" />
+                        </ComboBox>
+                        <ToggleSwitch x:Name="LedsToggle"
+                                      services:Localized.Key="IrLeds.Header"
+                                      IsOn="True" />
+                        <ToggleSwitch x:Name="ExternalFilterToggle"
+                                      services:Localized.Key="IrExternalFilter.Header"
+                                      IsOn="True" />
+                        <ToggleSwitch x:Name="DenoiseToggle"
+                                      services:Localized.Key="IrDenoise.Header"
+                                      IsOn="True" />
+                        <ToggleSwitch x:Name="FlipToggle"
+                                      services:Localized.Key="IrFlip.Header" />
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="StatsPanel"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="6">
+                        <TextBlock services:Localized.Key="IrFrameStatsHeader.Text"
+                                   FontSize="17"
+                                   FontWeight="SemiBold" />
+                        <TextBlock x:Name="FrameStatsText"
+                                   services:Localized.Key="IrNoFrameStats.Text"
+                                   Foreground="{StaticResource TextSecondaryBrush}"
+                                   TextWrapping="Wrap" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

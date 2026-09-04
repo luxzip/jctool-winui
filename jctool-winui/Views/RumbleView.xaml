@@ -1,0 +1,167 @@
+<UserControl
+    x:Class="JcTool.WinUI.Views.RumbleView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:services="using:JcTool.WinUI.Services">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="920"
+              Padding="32,28,32,40"
+              HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock services:Localized.Key="RumbleHeader.Text"
+                       Style="{StaticResource SectionTitleStyle}"
+                       FontSize="28" />
+
+            <Border Grid.Row="2" Style="{StaticResource PanelBorderStyle}">
+                <StackPanel Spacing="20">
+                    <Grid ColumnSpacing="16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <Border Width="56"
+                                Height="56"
+                                Background="{StaticResource SurfaceRaisedBrush}"
+                                CornerRadius="6">
+                            <FontIcon Glyph="&#xE995;"
+                                      FontSize="24"
+                                      Foreground="{StaticResource AccentBrush}" />
+                        </Border>
+                        <StackPanel Grid.Column="1"
+                                    VerticalAlignment="Center"
+                                    Spacing="3">
+                            <TextBlock x:Name="FileNameText"
+                                       services:Localized.Key="NoRumbleFile.Text"
+                                       FontSize="16"
+                                       FontWeight="SemiBold"
+                                       TextTrimming="CharacterEllipsis"
+                                       TextWrapping="NoWrap" />
+                            <TextBlock x:Name="FileDetailsText"
+                                       services:Localized.Key="RawRumbleFormat.Text"
+                                       Foreground="{StaticResource TextSecondaryBrush}"
+                                       FontSize="12" />
+                        </StackPanel>
+                        <Button Grid.Column="2"
+                                Click="LoadButton_Click">
+                            <StackPanel Orientation="Horizontal" Spacing="8">
+                                <FontIcon Glyph="&#xE8E5;" FontSize="15" />
+                                <TextBlock services:Localized.Key="LoadRumble.Content" />
+                            </StackPanel>
+                        </Button>
+                    </Grid>
+
+                    <Rectangle Height="1" Fill="{StaticResource BorderBrush}" />
+
+                    <Border x:Name="EqualizerPanel"
+                            Background="{StaticResource SurfaceRaisedBrush}"
+                            BorderBrush="{StaticResource BorderBrush}"
+                            BorderThickness="1"
+                            CornerRadius="4"
+                            Padding="14">
+                        <StackPanel Spacing="12">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="Auto" />
+                                </Grid.ColumnDefinitions>
+                                <TextBlock services:Localized.Key="RumbleEqualizerHeader.Text"
+                                           FontSize="15"
+                                           FontWeight="SemiBold" />
+                                <Button x:Name="ApplyEqualizerButton"
+                                        Grid.Column="1"
+                                        services:Localized.Key="RumbleConvert.Content"
+                                        Click="ApplyEqualizerButton_Click" />
+                            </Grid>
+                            <Grid ColumnSpacing="12" RowSpacing="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Spacing="4">
+                                    <TextBlock services:Localized.Key="RumbleLowFrequency.Text"
+                                               Foreground="{StaticResource TextSecondaryBrush}" />
+                                    <Slider x:Name="LowFrequencySlider"
+                                            Minimum="0"
+                                            Maximum="20"
+                                            Value="10"
+                                            StepFrequency="1" />
+                                </StackPanel>
+                                <StackPanel Grid.Column="1" Spacing="4">
+                                    <TextBlock services:Localized.Key="RumbleHighFrequency.Text"
+                                               Foreground="{StaticResource TextSecondaryBrush}" />
+                                    <Slider x:Name="HighFrequencySlider"
+                                            Minimum="0"
+                                            Maximum="20"
+                                            Value="10"
+                                            StepFrequency="1" />
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Spacing="4">
+                                    <TextBlock services:Localized.Key="RumbleAmplitude.Text"
+                                               Foreground="{StaticResource TextSecondaryBrush}" />
+                                    <Slider x:Name="LowAmplitudeSlider"
+                                            Minimum="0"
+                                            Maximum="20"
+                                            Value="10"
+                                            StepFrequency="1" />
+                                </StackPanel>
+                                <StackPanel Grid.Row="1" Grid.Column="1" Spacing="4">
+                                    <TextBlock services:Localized.Key="RumbleAmplitude.Text"
+                                               Foreground="{StaticResource TextSecondaryBrush}" />
+                                    <Slider x:Name="HighAmplitudeSlider"
+                                            Minimum="0"
+                                            Maximum="20"
+                                            Value="10"
+                                            StepFrequency="1" />
+                                </StackPanel>
+                            </Grid>
+                            <NumberBox x:Name="LoopCountBox"
+                                       services:Localized.Key="RumbleLoopCount.Header"
+                                       Minimum="0"
+                                       Maximum="1000"
+                                       SmallChange="1"
+                                       Value="0"
+                                       SpinButtonPlacementMode="Compact" />
+                            <TextBlock x:Name="ConvertStatusText"
+                                       Foreground="{StaticResource TextSecondaryBrush}"
+                                       TextWrapping="Wrap" />
+                        </StackPanel>
+                    </Border>
+
+                    <Grid ColumnSpacing="16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <StackPanel Spacing="3">
+                            <TextBlock services:Localized.Key="PlaybackStatus.Text"
+                                       Foreground="{StaticResource TextSecondaryBrush}"
+                                       FontSize="11" />
+                            <TextBlock x:Name="PlaybackStatusText"
+                                       services:Localized.Key="RumbleReady.Text"
+                                       FontSize="14" />
+                        </StackPanel>
+                        <Button x:Name="StopButton"
+                                Grid.Column="1"
+                                services:Localized.Key="Stop.Content"
+                                IsEnabled="{x:Bind ViewModel.IsRumblePlaying, Mode=OneWay}"
+                                Click="StopButton_Click" />
+                        <Button x:Name="PlayButton"
+                                Grid.Column="2"
+                                services:Localized.Key="Play.Content"
+                                Style="{StaticResource PrimaryButtonStyle}"
+                                IsEnabled="False"
+                                Click="PlayButton_Click" />
+                    </Grid>
+                </StackPanel>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

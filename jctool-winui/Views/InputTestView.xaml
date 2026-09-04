@@ -1,0 +1,182 @@
+<UserControl
+    x:Class="JcTool.WinUI.Views.InputTestView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:models="using:JcTool.WinUI.Models"
+    xmlns:services="using:JcTool.WinUI.Services">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="1080"
+              Padding="32,28,32,40"
+              HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock services:Localized.Key="InputHeader.Text"
+                           Style="{StaticResource SectionTitleStyle}"
+                           FontSize="28" />
+                <Button x:Name="InputStreamButton"
+                        Grid.Column="1"
+                        IsEnabled="{x:Bind ViewModel.HasSelectedController, Mode=OneWay}"
+                        Click="InputStreamButton_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon x:Name="InputStreamGlyph" Glyph="&#xE768;" FontSize="15" />
+                        <TextBlock x:Name="InputStreamLabel"
+                                   services:Localized.Key="StartInputStream.Content" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+            <Grid x:Name="InputGrid"
+                  Grid.Row="2"
+                  ColumnSpacing="16"
+                  RowSpacing="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="PrimaryColumn" Width="*" />
+                    <ColumnDefinition x:Name="SecondaryColumn" Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Border Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <TextBlock services:Localized.Key="InputStatusHeader.Text"
+                                   FontSize="17"
+                                   FontWeight="SemiBold" />
+                        <Grid ColumnSpacing="16" RowSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <StackPanel Spacing="3">
+                                <TextBlock services:Localized.Key="ButtonsLabel.Text" Foreground="{StaticResource TextSecondaryBrush}" />
+                                <TextBlock x:Name="ButtonsValue" FontFamily="Consolas" Text="00 00 00" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Spacing="3">
+                                <TextBlock services:Localized.Key="ConnectionLabel.Text" Foreground="{StaticResource TextSecondaryBrush}" />
+                                <TextBlock x:Name="ConnectionValue" Text="-" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Spacing="3">
+                                <TextBlock services:Localized.Key="BatteryLabel.Text" Foreground="{StaticResource TextSecondaryBrush}" />
+                                <TextBlock x:Name="BatteryValue" Text="-" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Spacing="3">
+                                <TextBlock services:Localized.Key="ChargingLabel.Text" Foreground="{StaticResource TextSecondaryBrush}" />
+                                <TextBlock x:Name="ChargingValue" Text="-" />
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="SticksPanel" Grid.Column="1" Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <TextBlock services:Localized.Key="SticksHeader.Text"
+                                   FontSize="17"
+                                   FontWeight="SemiBold" />
+                        <Grid ColumnSpacing="18" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock services:Localized.Key="LeftStick.Text" />
+                            <TextBlock Grid.Column="1" services:Localized.Key="RightStick.Text" />
+                            <TextBlock x:Name="LeftStickValue" Grid.Row="1" FontFamily="Consolas" Text="X 000  Y 000" />
+                            <TextBlock x:Name="RightStickValue" Grid.Row="1" Grid.Column="1" FontFamily="Consolas" Text="X 000  Y 000" />
+                            <ProgressBar x:Name="LeftXBar" Grid.Row="2" Minimum="0" Maximum="4095" />
+                            <ProgressBar x:Name="RightXBar" Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="4095" />
+                            <ProgressBar x:Name="LeftYBar" Grid.Row="3" Minimum="0" Maximum="4095" />
+                            <ProgressBar x:Name="RightYBar" Grid.Row="3" Grid.Column="1" Minimum="0" Maximum="4095" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="MotionPanel"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <TextBlock services:Localized.Key="MotionHeader.Text"
+                                   FontSize="17"
+                                   FontWeight="SemiBold" />
+                        <Grid ColumnSpacing="24">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Spacing="5">
+                                <TextBlock services:Localized.Key="Accelerometer.Text" Foreground="{StaticResource TextSecondaryBrush}" />
+                                <TextBlock x:Name="AccelerationValue" FontFamily="Consolas" Text="X      0   Y      0   Z      0" TextWrapping="Wrap" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Spacing="5">
+                                <TextBlock services:Localized.Key="Gyroscope.Text" Foreground="{StaticResource TextSecondaryBrush}" />
+                                <TextBlock x:Name="GyroscopeValue" FontFamily="Consolas" Text="X      0   Y      0   Z      0" TextWrapping="Wrap" />
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="ButtonsPanel"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <TextBlock services:Localized.Key="ButtonVisualizerHeader.Text"
+                                   FontSize="17"
+                                   FontWeight="SemiBold" />
+                        <ItemsRepeater ItemsSource="{x:Bind ButtonStates}">
+                            <ItemsRepeater.Layout>
+                                <UniformGridLayout MaximumRowsOrColumns="8"
+                                                   MinItemWidth="72"
+                                                   MinItemHeight="42"
+                                                   MinColumnSpacing="8"
+                                                   MinRowSpacing="8"
+                                                   ItemsStretch="Fill" />
+                            </ItemsRepeater.Layout>
+                            <ItemsRepeater.ItemTemplate>
+                                <DataTemplate x:DataType="models:InputButtonState">
+                                    <ToggleButton MinWidth="72"
+                                                  Height="42"
+                                                  Margin="0,0,8,8"
+                                                  Padding="4"
+                                                  HorizontalAlignment="Stretch"
+                                                  HorizontalContentAlignment="Center"
+                                                  IsChecked="{x:Bind IsPressed, Mode=OneWay}"
+                                                  IsEnabled="{x:Bind IsAvailable, Mode=OneWay}"
+                                                  IsHitTestVisible="False"
+                                                  IsTabStop="False"
+                                                  AutomationProperties.Name="{x:Bind Label}">
+                                        <TextBlock FontSize="12"
+                                                   Text="{x:Bind Label}"
+                                                   TextWrapping="NoWrap" />
+                                    </ToggleButton>
+                                </DataTemplate>
+                            </ItemsRepeater.ItemTemplate>
+                        </ItemsRepeater>
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

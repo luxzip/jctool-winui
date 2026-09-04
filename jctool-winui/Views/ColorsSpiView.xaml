@@ -1,0 +1,245 @@
+<UserControl
+    x:Class="JcTool.WinUI.Views.ColorsSpiView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:services="using:JcTool.WinUI.Services">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="1180"
+              Padding="32,28,32,40"
+              HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <TextBlock
+                       services:Localized.Key="ColorsHeader.Text"
+                       Style="{StaticResource SectionTitleStyle}"
+                       FontSize="28" />
+
+            <Grid x:Name="WorkspaceGrid"
+                  Grid.Row="2"
+                  ColumnSpacing="16"
+                  RowSpacing="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="EditorColumn" Width="3*" />
+                    <ColumnDefinition x:Name="ToolsColumn" Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Border Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="16">
+                        <TextBlock
+                                   services:Localized.Key="ColorEditorHeader.Text"
+                                   FontSize="18"
+                                   FontWeight="SemiBold" />
+
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Border x:Name="BodySwatch" Height="12" CornerRadius="3" />
+                            <Border x:Name="ButtonSwatch" Grid.Column="1" Height="12" CornerRadius="3" />
+                            <Border x:Name="LeftGripSwatch" Grid.Column="2" Height="12" CornerRadius="3" />
+                            <Border x:Name="RightGripSwatch" Grid.Column="3" Height="12" CornerRadius="3" />
+                        </Grid>
+
+                        <ComboBox x:Name="ColorTarget"
+                                  services:Localized.Key="ColorTarget.Header"
+                                  HorizontalAlignment="Stretch"
+                                  SelectedIndex="0"
+                                  SelectionChanged="ColorTarget_SelectionChanged">
+                            <ComboBoxItem services:Localized.Key="ColorBody.Content" />
+                            <ComboBoxItem services:Localized.Key="ColorButtons.Content" />
+                            <ComboBoxItem services:Localized.Key="ColorLeftGrip.Content" />
+                            <ComboBoxItem services:Localized.Key="ColorRightGrip.Content" />
+                        </ComboBox>
+
+                        <ColorPicker x:Name="ColorEditor"
+                                     HorizontalAlignment="Stretch"
+                                     MaxWidth="440"
+                                     MaxHeight="360"
+                                     IsAlphaEnabled="False"
+                                     IsAlphaSliderVisible="False"
+                                     IsAlphaTextInputVisible="False"
+                                     IsColorChannelTextInputVisible="False"
+                                     IsHexInputVisible="False"
+                                     ColorChanged="ColorEditor_ColorChanged" />
+
+                        <TextBox x:Name="ColorHex"
+                                 services:Localized.Key="ColorHex.Header"
+                                 MaxLength="7"
+                                 TextChanged="ColorHex_TextChanged" />
+
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="ReloadColorsButton"
+                                    Grid.Column="1"
+                                    Width="40"
+                                    Height="36"
+                                    Click="ReloadColorsButton_Click">
+                                <FontIcon Glyph="&#xE72C;" FontSize="15" />
+                            </Button>
+                            <Button x:Name="WriteColorsButton"
+                                    services:Localized.Key="WriteColors.Content"
+                                    Grid.Column="2"
+                                    Style="{StaticResource PrimaryButtonStyle}"
+                                    IsEnabled="{x:Bind ViewModel.HasSelectedController, Mode=OneWay}"
+                                    Click="WriteColorsButton_Click" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="SpiPanel"
+                        Grid.Column="1"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="16">
+                        <TextBlock
+                                   services:Localized.Key="SpiToolsHeader.Text"
+                                   FontSize="18"
+                                   FontWeight="SemiBold" />
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <TextBox x:Name="SpiAddress"
+                                     services:Localized.Key="SpiAddress.Header"
+                                     FontFamily="Consolas"
+                                     MaxLength="7"
+                                     Text="0x6050" />
+                            <NumberBox x:Name="SpiLength"
+                                       services:Localized.Key="SpiLength.Header"
+                                       Grid.Column="1"
+                                       Minimum="1"
+                                       Maximum="256"
+                                       SmallChange="1"
+                                       SpinButtonPlacementMode="Compact"
+                                       Value="12" />
+                        </Grid>
+                        <Button
+                                services:Localized.Key="ReadSpi.Content"
+                                HorizontalAlignment="Left"
+                                IsEnabled="{x:Bind ViewModel.HasSelectedController, Mode=OneWay}"
+                                Click="ReadSpiButton_Click" />
+                        <TextBox x:Name="SpiOutput"
+                                 services:Localized.Key="SpiOutput.Header"
+                                 MinHeight="250"
+                                 FontFamily="Consolas"
+                                 FontSize="12"
+                                 IsReadOnly="True"
+                                 AcceptsReturn="True"
+                                 TextWrapping="NoWrap"
+                                 ScrollViewer.VerticalScrollBarVisibility="Auto" />
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="BackupPanel"
+                        Grid.Row="2"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock services:Localized.Key="SpiBackupHeader.Text"
+                                       FontSize="18"
+                                       FontWeight="SemiBold" />
+                            <TextBlock x:Name="BackupStatusText"
+                                       Grid.Column="1"
+                                       Foreground="{StaticResource TextSecondaryBrush}"
+                                       FontSize="12"
+                                       TextTrimming="CharacterEllipsis" />
+                        </Grid>
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Button x:Name="CreateBackupButton"
+                                    services:Localized.Key="CreateSpiBackup.Content"
+                                    IsEnabled="{x:Bind ViewModel.HasSelectedController, Mode=OneWay}"
+                                    Click="CreateBackupButton_Click" />
+                            <Button x:Name="LoadBackupButton"
+                                    Grid.Column="1"
+                                    services:Localized.Key="LoadSpiBackup.Content"
+                                    Click="LoadBackupButton_Click" />
+                            <TextBlock x:Name="BackupHashText"
+                                       Grid.Column="2"
+                                       Margin="8,0,0,0"
+                                       VerticalAlignment="Center"
+                                       Foreground="{StaticResource TextSecondaryBrush}"
+                                       FontFamily="Consolas"
+                                       FontSize="11"
+                                       TextWrapping="Wrap" />
+                        </Grid>
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="2*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <ComboBox x:Name="RestoreScopePicker"
+                                      services:Localized.Key="RestoreScope.Header"
+                                      SelectedIndex="0"
+                                      HorizontalAlignment="Stretch"
+                                      SelectionChanged="RestoreScopePicker_SelectionChanged">
+                                <ComboBoxItem services:Localized.Key="RestoreColors.Content" Tag="Colors" />
+                                <ComboBoxItem services:Localized.Key="RestoreSerial.Content" Tag="SerialNumber" />
+                                <ComboBoxItem services:Localized.Key="RestoreCalibration.Content" Tag="UserCalibration" />
+                                <ComboBoxItem services:Localized.Key="RestoreFull.Content" Tag="Full" />
+                            </ComboBox>
+                            <TextBox x:Name="SerialNumberBox"
+                                     Grid.Column="1"
+                                     services:Localized.Key="SerialNumber.Header"
+                                     MaxLength="15"
+                                     PlaceholderText="ABC123456789012" />
+                            <Button x:Name="WriteSerialButton"
+                                    Grid.Column="2"
+                                    services:Localized.Key="WriteSerial.Content"
+                                    Click="WriteSerialButton_Click" />
+                        </Grid>
+                        <Grid ColumnSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock services:Localized.Key="SpiBackupDisclaimer.Text"
+                                       Foreground="{StaticResource WarningBrush}"
+                                       TextWrapping="Wrap" />
+                            <Button x:Name="RestoreBackupButton"
+                                    Grid.Column="1"
+                                    services:Localized.Key="RestoreBackup.Content"
+                                    Style="{StaticResource PrimaryButtonStyle}"
+                                    IsEnabled="False"
+                                    Click="RestoreBackupButton_Click" />
+                        </Grid>
+                        <Button x:Name="FinalizeRestoreButton"
+                                HorizontalAlignment="Right"
+                                services:Localized.Key="FinalizeRestore.Content"
+                                IsEnabled="False"
+                                Visibility="Collapsed"
+                                Click="FinalizeRestoreButton_Click" />
+                    </StackPanel>
+                </Border>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

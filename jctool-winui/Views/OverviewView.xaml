@@ -1,0 +1,209 @@
+<UserControl
+    x:Class="JcTool.WinUI.Views.OverviewView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:services="using:JcTool.WinUI.Services">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid x:Name="ContentGrid"
+              MaxWidth="1180"
+              Padding="32,28,32,40"
+              HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <StackPanel Spacing="6">
+                <TextBlock Style="{StaticResource SectionTitleStyle}"
+                           services:Localized.Key="OverviewHeader.Text"
+                           FontSize="28" />
+            </StackPanel>
+
+            <Grid x:Name="OverviewGrid"
+                  Grid.Row="2"
+                  ColumnSpacing="16"
+                  RowSpacing="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="PrimaryColumn" Width="3*" />
+                    <ColumnDefinition x:Name="SecondaryColumn" Width="2*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Border Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="18">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <StackPanel Spacing="3">
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           services:Localized.Key="ActiveControllerLabel.Text"
+                                           FontSize="11"
+                                           FontWeight="SemiBold" />
+                                <TextBlock FontSize="22"
+                                           FontWeight="SemiBold"
+                                           Text="{x:Bind ViewModel.SelectedControllerName, Mode=OneWay}"
+                                           TextWrapping="Wrap" />
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           FontFamily="Consolas"
+                                           FontSize="13"
+                                           Text="{x:Bind ViewModel.SelectedControllerSerial, Mode=OneWay}"
+                                           TextTrimming="CharacterEllipsis"
+                                           TextWrapping="NoWrap" />
+                            </StackPanel>
+                            <Border Grid.Column="1"
+                                    Width="56"
+                                    Height="56"
+                                    Margin="16,0,0,0"
+                                    Background="{StaticResource SurfaceRaisedBrush}"
+                                    CornerRadius="6">
+                                <Button x:Name="IdentifyButton"
+                                        Background="Transparent"
+                                        IsEnabled="{x:Bind ViewModel.HasSelectedController, Mode=OneWay}"
+                                        Click="IdentifyButton_Click">
+                                    <FontIcon Glyph="&#xE7FC;"
+                                              FontSize="26"
+                                              Foreground="{StaticResource AccentBrush}" />
+                                </Button>
+                            </Border>
+                        </Grid>
+
+                        <Rectangle Height="1" Fill="{StaticResource BorderBrush}" />
+
+                        <Grid ColumnSpacing="24" RowSpacing="12">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <StackPanel Spacing="3">
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           services:Localized.Key="ConnectionLabel.Text"
+                                           FontSize="11" />
+                                <TextBlock
+                                           services:Localized.Key="ConnectionValue.Text"
+                                           FontSize="14" />
+                            </StackPanel>
+                            <StackPanel Grid.Column="1" Spacing="3">
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           services:Localized.Key="SessionLabel.Text"
+                                           FontSize="11" />
+                                <TextBlock
+                                           services:Localized.Key="SessionValue.Text"
+                                           FontSize="14" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Spacing="3">
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           services:Localized.Key="FirmwareLabel.Text"
+                                           FontSize="11" />
+                                <TextBlock FontSize="14"
+                                           Text="{x:Bind ViewModel.SelectedFirmware, Mode=OneWay}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1" Spacing="3">
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           services:Localized.Key="BatteryLabel.Text"
+                                           FontSize="11" />
+                                <TextBlock FontSize="14"
+                                           Text="{x:Bind ViewModel.SelectedBattery, Mode=OneWay}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Spacing="3">
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           services:Localized.Key="MacLabel.Text"
+                                           FontSize="11" />
+                                <TextBlock FontFamily="Consolas"
+                                           FontSize="13"
+                                           Text="{x:Bind ViewModel.SelectedMacAddress, Mode=OneWay}" />
+                            </StackPanel>
+                            <StackPanel Grid.Row="2" Grid.Column="1" Spacing="3">
+                                <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                           services:Localized.Key="TemperatureLabel.Text"
+                                           FontSize="11" />
+                                <TextBlock FontSize="14"
+                                           Text="{x:Bind ViewModel.SelectedTemperature, Mode=OneWay}" />
+                            </StackPanel>
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="SafetyPanel"
+                        Grid.Column="1"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <FontIcon HorizontalAlignment="Left"
+                                  Glyph="&#xE72E;"
+                                  FontSize="22"
+                                  Foreground="{StaticResource WarningBrush}" />
+                        <TextBlock FontSize="16"
+                                   services:Localized.Key="ProtectedSession.Text"
+                                   FontWeight="SemiBold" />
+                        <Grid ColumnSpacing="20" RowSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                       services:Localized.Key="SpiWrites.Text" />
+                            <TextBlock Grid.Column="1"
+                                       Foreground="{StaticResource WarningBrush}"
+                                       services:Localized.Key="ColorWriteGuard.Text"
+                                       FontWeight="SemiBold" />
+                            <TextBlock Grid.Row="1"
+                                       Foreground="{StaticResource TextSecondaryBrush}"
+                                       services:Localized.Key="CalibrationWrites.Text" />
+                            <TextBlock Grid.Row="1"
+                                       Grid.Column="1"
+                                       Foreground="{StaticResource WarningBrush}"
+                                       services:Localized.Key="CalibrationWriteGuard.Text"
+                                       FontWeight="SemiBold" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="TaskPanel"
+                        Grid.Row="1"
+                        Grid.ColumnSpan="2"
+                        Style="{StaticResource PanelBorderStyle}">
+                    <Grid ColumnSpacing="16">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="Auto" />
+                            <ColumnDefinition Width="*" />
+                            <ColumnDefinition Width="Auto" />
+                        </Grid.ColumnDefinitions>
+                        <FontIcon Glyph="&#xE9D9;"
+                                  FontSize="20"
+                                  Foreground="{StaticResource AccentBrush}" />
+                        <StackPanel Grid.Column="1" Spacing="3">
+                            <TextBlock FontSize="14"
+                                       services:Localized.Key="NoActiveTasks.Text"
+                                       FontWeight="SemiBold" />
+                            <TextBlock Foreground="{StaticResource TextSecondaryBrush}"
+                                       services:Localized.Key="WaitingOperation.Text"
+                                       FontSize="12" />
+                        </StackPanel>
+                        <TextBlock Grid.Column="2"
+                                   VerticalAlignment="Center"
+                                   Foreground="{StaticResource TextSecondaryBrush}"
+                                   services:Localized.Key="Idle.Text"
+                                   FontSize="12" />
+                    </Grid>
+                </Border>
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

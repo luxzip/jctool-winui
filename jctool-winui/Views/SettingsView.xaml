@@ -1,0 +1,49 @@
+<UserControl
+    x:Class="JcTool.WinUI.Views.SettingsView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:services="using:JcTool.WinUI.Services">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="920"
+              Padding="32,28,32,40"
+              HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="24" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <TextBlock
+                       services:Localized.Key="SettingsHeader.Text"
+                       Style="{StaticResource SectionTitleStyle}"
+                       FontSize="28" />
+
+            <Border Grid.Row="2" Style="{StaticResource PanelBorderStyle}">
+                <StackPanel MaxWidth="520"
+                            HorizontalAlignment="Left"
+                            Spacing="18">
+                    <TextBlock
+                               services:Localized.Key="LanguageHeader.Text"
+                               FontSize="18"
+                               FontWeight="SemiBold" />
+                    <ComboBox x:Name="LanguagePicker"
+                              services:Localized.Key="LanguagePicker.Header"
+                              MinWidth="280">
+                        <ComboBoxItem services:Localized.Key="LanguageSystem.Content" Tag="system" />
+                        <ComboBoxItem services:Localized.Key="LanguageChinese.Content" Tag="zh-CN" />
+                        <ComboBoxItem services:Localized.Key="LanguageEnglish.Content" Tag="en-US" />
+                    </ComboBox>
+                    <Button
+                            services:Localized.Key="ApplyLanguage.Content"
+                            Style="{StaticResource PrimaryButtonStyle}"
+                            HorizontalAlignment="Left"
+                            Click="ApplyLanguageButton_Click" />
+                    <InfoBar x:Name="RestartError"
+                             IsOpen="False"
+                             Severity="Error" />
+                </StackPanel>
+            </Border>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

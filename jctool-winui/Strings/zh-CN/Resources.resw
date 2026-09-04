@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppTitle.Text" xml:space="preserve"><value>Joy-Con 工具箱</value></data>
+  <data name="WindowTitle" xml:space="preserve"><value>Joy-Con 工具箱</value></data>
+  <data name="RefreshControllers" xml:space="preserve"><value>刷新控制器</value></data>
+  <data name="NavOverview.Content" xml:space="preserve"><value>概览</value></data>
+  <data name="NavColors.Content" xml:space="preserve"><value>颜色与 SPI</value></data>
+  <data name="NavCalibration.Content" xml:space="preserve"><value>校准</value></data>
+  <data name="NavRumble.Content" xml:space="preserve"><value>HD 震动</value></data>
+  <data name="NavInput.Content" xml:space="preserve"><value>输入测试</value></data>
+  <data name="NavIr.Content" xml:space="preserve"><value>红外摄像头</value></data>
+  <data name="NavNfc.Content" xml:space="preserve"><value>NFC</value></data>
+  <data name="NavDiagnostics.Content" xml:space="preserve"><value>诊断</value></data>
+  <data name="FooterSession.Text" xml:space="preserve"><value>受保护写入</value></data>
+  <data name="OverviewHeader.Text" xml:space="preserve"><value>控制器概览</value></data>
+  <data name="ActiveControllerLabel.Text" xml:space="preserve"><value>当前控制器</value></data>
+  <data name="ConnectionLabel.Text" xml:space="preserve"><value>连接方式</value></data>
+  <data name="ConnectionValue.Text" xml:space="preserve"><value>蓝牙 / USB HID</value></data>
+  <data name="SessionLabel.Text" xml:space="preserve"><value>会话状态</value></data>
+  <data name="SessionValue.Text" xml:space="preserve"><value>校验式操作</value></data>
+  <data name="FirmwareLabel.Text" xml:space="preserve"><value>固件版本</value></data>
+  <data name="BatteryLabel.Text" xml:space="preserve"><value>电池</value></data>
+  <data name="NotRead.Text" xml:space="preserve"><value>尚未读取</value></data>
+  <data name="ProtectedSession.Text" xml:space="preserve"><value>写入保护</value></data>
+  <data name="SpiWrites.Text" xml:space="preserve"><value>SPI 写入</value></data>
+  <data name="CalibrationWrites.Text" xml:space="preserve"><value>校准写入</value></data>
+  <data name="Off.Text" xml:space="preserve"><value>关闭</value></data>
+  <data name="ColorWriteGuard.Text" xml:space="preserve"><value>需要确认</value></data>
+  <data name="CalibrationWriteGuard.Text" xml:space="preserve"><value>需要读取验证</value></data>
+  <data name="NoActiveTasks.Text" xml:space="preserve"><value>没有正在运行的任务</value></data>
+  <data name="WaitingOperation.Text" xml:space="preserve"><value>等待操作。</value></data>
+  <data name="Idle.Text" xml:space="preserve"><value>空闲</value></data>
+  <data name="Ready" xml:space="preserve"><value>就绪</value></data>
+  <data name="EmptySlot" xml:space="preserve"><value>空插槽</value></data>
+  <data name="NoControllerDetected" xml:space="preserve"><value>未检测到控制器</value></data>
+  <data name="Disconnected" xml:space="preserve"><value>未连接</value></data>
+  <data name="Connected" xml:space="preserve"><value>已连接</value></data>
+  <data name="SlotFormat" xml:space="preserve"><value>插槽 {0}</value></data>
+  <data name="NoControllerSelected" xml:space="preserve"><value>未选择控制器</value></data>
+  <data name="ConnectThenRefresh" xml:space="preserve"><value>连接控制器后刷新。</value></data>
+  <data name="ScanningControllers" xml:space="preserve"><value>正在扫描控制器...</value></data>
+  <data name="NoControllersDetected" xml:space="preserve"><value>未检测到控制器</value></data>
+  <data name="ControllersConnectedFormat" xml:space="preserve"><value>已连接 {0} 个控制器</value></data>
+  <data name="OneControllerConnected" xml:space="preserve"><value>已连接 1 个控制器</value></data>
+  <data name="ControllerScanCancelled" xml:space="preserve"><value>已取消控制器扫描</value></data>
+  <data name="SelectedControllerFormat" xml:space="preserve"><value>已选择 {0}</value></data>
+  <data name="BridgeUnavailable" xml:space="preserve"><value>原生设备桥接不可用</value></data>
+  <data name="BridgeArchitectureMismatch" xml:space="preserve"><value>原生设备桥接的架构不匹配</value></data>
+  <data name="BridgeIncompatible" xml:space="preserve"><value>原生设备桥接版本不兼容</value></data>
+  <data name="ControllerScanFailed" xml:space="preserve"><value>控制器扫描失败</value></data>
+  <data name="SerialUnavailable" xml:space="preserve"><value>无法读取序列号</value></data>
+  <data name="NintendoController" xml:space="preserve"><value>任天堂控制器</value></data>
+  <data name="NotReadValue" xml:space="preserve"><value>尚未读取</value></data>
+  <data name="BatteryFormat" xml:space="preserve"><value>{0}% · {1:F2} V</value></data>
+  <data name="TemperatureFormat" xml:space="preserve"><value>{0:F1} ℃</value></data>
+  <data name="MacLabel.Text" xml:space="preserve"><value>MAC 地址</value></data>
+  <data name="TemperatureLabel.Text" xml:space="preserve"><value>温度</value></data>
+  <data name="SelectControllerFirst" xml:space="preserve"><value>请先选择已连接的控制器</value></data>
+  <data name="Working" xml:space="preserve"><value>正在执行...</value></data>
+  <data name="CancelOperation" xml:space="preserve"><value>取消当前操作</value></data>
+  <data name="OperationCancelling" xml:space="preserve"><value>正在取消当前操作...</value></data>
+  <data name="OperationCancelled" xml:space="preserve"><value>操作已取消</value></data>
+  <data name="IdentifySucceeded" xml:space="preserve"><value>已发送识别震动</value></data>
+  <data name="ColorsWritten" xml:space="preserve"><value>控制器颜色已写入并通过回读校验</value></data>
+  <data name="ReadingSpi" xml:space="preserve"><value>正在读取 SPI...</value></data>
+  <data name="SpiReadSucceededFormat" xml:space="preserve"><value>已读取 {0} 字节 SPI 数据</value></data>
+  <data name="OperationFailedFormat" xml:space="preserve"><value>操作失败：{0}</value></data>
+  <data name="NativeOperationFailedFormat" xml:space="preserve"><value>设备返回错误 {0}</value></data>
+  <data name="IdentifyController" xml:space="preserve"><value>识别控制器</value></data>
+  <data name="ColorsHeader.Text" xml:space="preserve"><value>颜色与 SPI</value></data>
+  <data name="ColorEditorHeader.Text" xml:space="preserve"><value>控制器颜色</value></data>
+  <data name="ColorTarget.Header" xml:space="preserve"><value>颜色位置</value></data>
+  <data name="ColorBody.Content" xml:space="preserve"><value>外壳</value></data>
+  <data name="ColorButtons.Content" xml:space="preserve"><value>按键</value></data>
+  <data name="ColorLeftGrip.Content" xml:space="preserve"><value>左握把</value></data>
+  <data name="ColorRightGrip.Content" xml:space="preserve"><value>右握把</value></data>
+  <data name="ColorHex.Header" xml:space="preserve"><value>十六进制颜色</value></data>
+  <data name="ReloadColors.Content" xml:space="preserve"><value>重新读取</value></data>
+  <data name="ReloadColorsTooltip" xml:space="preserve"><value>从控制器重新读取颜色</value></data>
+  <data name="WriteColors.Content" xml:space="preserve"><value>写入颜色</value></data>
+  <data name="ConfirmColorWriteTitle" xml:space="preserve"><value>写入控制器颜色？</value></data>
+  <data name="ConfirmColorWriteLine1" xml:space="preserve"><value>当前颜色值将写入控制器的 SPI。</value></data>
+  <data name="ConfirmColorWriteLine2" xml:space="preserve"><value>修改硬件数据前，请先创建 SPI 备份。</value></data>
+  <data name="Continue" xml:space="preserve"><value>继续</value></data>
+  <data name="Cancel" xml:space="preserve"><value>取消</value></data>
+  <data name="SpiToolsHeader.Text" xml:space="preserve"><value>SPI 读取器</value></data>
+  <data name="SpiAddress.Header" xml:space="preserve"><value>地址</value></data>
+  <data name="SpiLength.Header" xml:space="preserve"><value>长度</value></data>
+  <data name="ReadSpi.Content" xml:space="preserve"><value>读取</value></data>
+  <data name="SpiOutput.Header" xml:space="preserve"><value>十六进制输出</value></data>
+  <data name="SpiBackupHeader.Text" xml:space="preserve"><value>SPI 备份与恢复</value></data>
+  <data name="CreateSpiBackup.Content" xml:space="preserve"><value>创建备份</value></data>
+  <data name="LoadSpiBackup.Content" xml:space="preserve"><value>加载备份</value></data>
+  <data name="RestoreScope.Header" xml:space="preserve"><value>恢复范围</value></data>
+  <data name="RestoreColors.Content" xml:space="preserve"><value>颜色</value></data>
+  <data name="RestoreSerial.Content" xml:space="preserve"><value>序列号</value></data>
+  <data name="RestoreCalibration.Content" xml:space="preserve"><value>用户校准</value></data>
+  <data name="RestoreFull.Content" xml:space="preserve"><value>完整安全恢复</value></data>
+  <data name="SerialNumber.Header" xml:space="preserve"><value>新序列号</value></data>
+  <data name="WriteSerial.Content" xml:space="preserve"><value>写入序列号</value></data>
+  <data name="RestoreBackup.Content" xml:space="preserve"><value>恢复所选范围</value></data>
+  <data name="SpiBackupDisclaimer.Text" xml:space="preserve"><value>只有同产品、同控制器且 SHA-256 伴随文件匹配的备份才能恢复。完整恢复不会重启控制器或修改配对状态。</value></data>
+  <data name="SpiBackupNotLoaded" xml:space="preserve"><value>未加载备份</value></data>
+  <data name="SpiBackupHashFormat" xml:space="preserve"><value>SHA-256 {0} · {1}</value></data>
+  <data name="ChecksumVerified" xml:space="preserve"><value>校验和已验证</value></data>
+  <data name="ChecksumMissing" xml:space="preserve"><value>缺少校验和伴随文件</value></data>
+  <data name="SpiBackupChecksumMissing" xml:space="preserve"><value>恢复备份前必须存在 SHA-256 伴随文件</value></data>
+  <data name="SpiBackupSizeInvalid" xml:space="preserve"><value>备份必须正好为 512 KiB</value></data>
+  <data name="SpiBackupProductMismatch" xml:space="preserve"><value>备份控制器类型与所选控制器不匹配</value></data>
+  <data name="SpiBackupControllerMismatch" xml:space="preserve"><value>备份中的蓝牙身份与所选控制器不匹配</value></data>
+  <data name="SpiBackupChecksumInvalid" xml:space="preserve"><value>备份校验和与伴随文件不匹配</value></data>
+  <data name="SpiBackupReady" xml:space="preserve"><value>已准备好经过验证的备份</value></data>
+  <data name="SpiBackupVerificationFailed" xml:space="preserve"><value>读取过程中 SPI 备份校验失败</value></data>
+  <data name="SpiBackupCreating" xml:space="preserve"><value>正在创建并校验 SPI 备份...</value></data>
+  <data name="SpiBackupCreated" xml:space="preserve"><value>SPI 备份已创建并校验</value></data>
+  <data name="SpiRestoreWriting" xml:space="preserve"><value>正在写入并校验 SPI 恢复数据...</value></data>
+  <data name="SpiRestoreCompleted" xml:space="preserve"><value>SPI 恢复已完成并校验</value></data>
+  <data name="ConfirmSpiRestoreTitle" xml:space="preserve"><value>恢复 SPI 数据？</value></data>
+  <data name="SpiRestoreWarningLine1" xml:space="preserve"><value>所选数据将写入控制器 SPI，并在写入后回读校验。</value></data>
+  <data name="SpiRestoreFullWarningLine2" xml:space="preserve"><value>完整恢复会替换工厂/用户配置区域，并擦除内部序列号备份区。请勿断开控制器。</value></data>
+  <data name="SpiRestoreWarningLine2" xml:space="preserve"><value>错误数据可能导致控制器无法使用，直到恢复已知良好备份。</value></data>
+  <data name="ConfirmSerialWriteTitle" xml:space="preserve"><value>写入序列号？</value></data>
+  <data name="SerialWriteWarning" xml:space="preserve"><value>这会修改控制器序列号，请先创建并保存经过验证的 SPI 备份。</value></data>
+  <data name="SerialNumberInvalid" xml:space="preserve"><value>序列号必须为 1 到 15 个可打印 ASCII 字符</value></data>
+  <data name="SerialNumberProUnsupported" xml:space="preserve"><value>Pro Controller 不支持写入序列号</value></data>
+  <data name="SerialNumberWritten" xml:space="preserve"><value>序列号已写入并校验</value></data>
+  <data name="InvalidSpiAddress" xml:space="preserve"><value>请输入 00000 到 7FFFF 范围内的十六进制 SPI 地址</value></data>
+  <data name="SettingsHeader.Text" xml:space="preserve"><value>设置</value></data>
+  <data name="LanguageHeader.Text" xml:space="preserve"><value>界面语言</value></data>
+  <data name="LanguagePicker.Header" xml:space="preserve"><value>语言</value></data>
+  <data name="LanguageSystem.Content" xml:space="preserve"><value>跟随系统</value></data>
+  <data name="LanguageChinese.Content" xml:space="preserve"><value>简体中文</value></data>
+  <data name="LanguageEnglish.Content" xml:space="preserve"><value>English</value></data>
+  <data name="ApplyLanguage.Content" xml:space="preserve"><value>应用并重启</value></data>
+  <data name="RestartFailed" xml:space="preserve"><value>应用无法自动重启</value></data>
+  <data name="CalibrationHeader.Text" xml:space="preserve"><value>校准</value></data>
+  <data name="ReadCalibration.Content" xml:space="preserve"><value>读取校准</value></data>
+  <data name="LeftStickHeader.Text" xml:space="preserve"><value>左摇杆用户校准</value></data>
+  <data name="RightStickHeader.Text" xml:space="preserve"><value>右摇杆用户校准</value></data>
+  <data name="Minimum.Text" xml:space="preserve"><value>最小值</value></data>
+  <data name="Center.Text" xml:space="preserve"><value>中心值</value></data>
+  <data name="Maximum.Text" xml:space="preserve"><value>最大值</value></data>
+  <data name="SensorHeader.Text" xml:space="preserve"><value>六轴传感器用户校准</value></data>
+  <data name="Accelerometer.Text" xml:space="preserve"><value>加速度计</value></data>
+  <data name="Gyroscope.Text" xml:space="preserve"><value>陀螺仪</value></data>
+  <data name="StickParametersHeader.Text" xml:space="preserve"><value>摇杆设备参数</value></data>
+  <data name="Deadzone.Header" xml:space="preserve"><value>主摇杆死区</value></data>
+  <data name="RangeRatio.Header" xml:space="preserve"><value>主摇杆范围比</value></data>
+  <data name="SecondDeadzone.Header" xml:space="preserve"><value>右摇杆死区</value></data>
+  <data name="SecondRangeRatio.Header" xml:space="preserve"><value>右摇杆范围比</value></data>
+  <data name="WriteParameters.Content" xml:space="preserve"><value>写入设备参数</value></data>
+  <data name="WriteCalibration.Content" xml:space="preserve"><value>写入校准</value></data>
+  <data name="Enabled" xml:space="preserve"><value>启用</value></data>
+  <data name="Disabled" xml:space="preserve"><value>禁用</value></data>
+  <data name="CalibrationNotRead" xml:space="preserve"><value>写入前请先读取并验证所选控制器。</value></data>
+  <data name="CalibrationReadFailed" xml:space="preserve"><value>未能完整读取校准数据，写入仍保持禁用。</value></data>
+  <data name="CalibrationReady" xml:space="preserve"><value>校准数据已与所选控制器身份完成验证。</value></data>
+  <data name="CalibrationIdentityChanged" xml:space="preserve"><value>所选控制器已改变，写入前请重新读取校准。</value></data>
+  <data name="CalibrationOrderInvalid" xml:space="preserve"><value>每个已启用的摇杆轴必须满足：最小值 &lt; 中心值 &lt; 最大值。</value></data>
+  <data name="ConfirmCalibrationTitle" xml:space="preserve"><value>写入用户校准？</value></data>
+  <data name="ConfirmCalibrationLine1" xml:space="preserve"><value>界面中的用户校准值将写入控制器 SPI。</value></data>
+  <data name="ConfirmCalibrationLine2" xml:space="preserve"><value>错误数值可能导致控制器在恢复校准前无法正常使用。</value></data>
+  <data name="ConfirmParametersTitle" xml:space="preserve"><value>写入摇杆设备参数？</value></data>
+  <data name="ConfirmParametersLine1" xml:space="preserve"><value>这些数值通常由工厂写入。</value></data>
+  <data name="ConfirmParametersLine2" xml:space="preserve"><value>仅在确认替换数值正确时继续。</value></data>
+  <data name="CalibrationWritten" xml:space="preserve"><value>用户校准已写入并通过回读校验</value></data>
+  <data name="ParametersWritten" xml:space="preserve"><value>摇杆参数已写入并通过回读校验</value></data>
+  <data name="CalibrationWriteFailed" xml:space="preserve"><value>校准写入失败，请重新读取控制器后再试。</value></data>
+  <data name="RumbleHeader.Text" xml:space="preserve"><value>HD 震动</value></data>
+  <data name="NoRumbleFile.Text" xml:space="preserve"><value>未加载文件</value></data>
+  <data name="RawRumbleFormat.Text" xml:space="preserve"><value>原始 HD 震动 · .jcvib</value></data>
+  <data name="BinaryRumbleFormat.Text" xml:space="preserve"><value>二进制 HD 震动 · .bnvib</value></data>
+  <data name="LoopRumbleFormat.Text" xml:space="preserve"><value>循环二进制 HD 震动 · .bnvib</value></data>
+  <data name="LoopWaitRumbleFormat.Text" xml:space="preserve"><value>循环/等待二进制 HD 震动 · .bnvib</value></data>
+  <data name="LoadRumble.Content" xml:space="preserve"><value>加载</value></data>
+  <data name="RumbleLowFrequency.Text" xml:space="preserve"><value>低频</value></data>
+  <data name="RumbleHighFrequency.Text" xml:space="preserve"><value>高频</value></data>
+  <data name="RumbleEqualizerHeader.Text" xml:space="preserve"><value>均衡器</value></data>
+  <data name="RumbleAmplitude.Text" xml:space="preserve"><value>幅度</value></data>
+  <data name="RumblePitch.Text" xml:space="preserve"><value>频率</value></data>
+  <data name="RumbleLoopCount.Header" xml:space="preserve"><value>额外循环次数</value></data>
+  <data name="RumbleConvert.Content" xml:space="preserve"><value>应用均衡器</value></data>
+  <data name="RumbleConvertReady" xml:space="preserve"><value>播放二进制震动时会按当前均衡器转换</value></data>
+  <data name="PlaybackStatus.Text" xml:space="preserve"><value>播放状态</value></data>
+  <data name="RumbleReady.Text" xml:space="preserve"><value>就绪</value></data>
+  <data name="Play.Content" xml:space="preserve"><value>播放</value></data>
+  <data name="Stop.Content" xml:space="preserve"><value>停止</value></data>
+  <data name="InvalidRumbleFile" xml:space="preserve"><value>RRAW 文件无效或数据不完整</value></data>
+  <data name="RumbleDetailsFormat" xml:space="preserve"><value>{0} 个采样 · {1} 毫秒 · {2:F2} 秒</value></data>
+  <data name="RumblePlaying" xml:space="preserve"><value>正在播放 HD 震动...</value></data>
+  <data name="RumbleStopping" xml:space="preserve"><value>正在停止播放...</value></data>
+  <data name="RumbleCompleted" xml:space="preserve"><value>播放完成</value></data>
+  <data name="RumbleStopped" xml:space="preserve"><value>播放已停止</value></data>
+  <data name="ControllerBusy" xml:space="preserve"><value>所选控制器正忙</value></data>
+  <data name="InputHeader.Text" xml:space="preserve"><value>输入测试</value></data>
+  <data name="ReadInput.Content" xml:space="preserve"><value>读取输入</value></data>
+  <data name="StartInputStream.Content" xml:space="preserve"><value>开始连续读取</value></data>
+  <data name="StopInputStream.Content" xml:space="preserve"><value>停止连续读取</value></data>
+  <data name="InputStatusHeader.Text" xml:space="preserve"><value>控制器状态</value></data>
+  <data name="ButtonVisualizerHeader.Text" xml:space="preserve"><value>按键状态</value></data>
+  <data name="ButtonMinus" xml:space="preserve"><value>减号</value></data>
+  <data name="ButtonPlus" xml:space="preserve"><value>加号</value></data>
+  <data name="ButtonLeftStick" xml:space="preserve"><value>左摇杆键</value></data>
+  <data name="ButtonRightStick" xml:space="preserve"><value>右摇杆键</value></data>
+  <data name="ButtonUp" xml:space="preserve"><value>上</value></data>
+  <data name="ButtonDown" xml:space="preserve"><value>下</value></data>
+  <data name="ButtonLeft" xml:space="preserve"><value>左</value></data>
+  <data name="ButtonRight" xml:space="preserve"><value>右</value></data>
+  <data name="ButtonHome" xml:space="preserve"><value>HOME</value></data>
+  <data name="ButtonCapture" xml:space="preserve"><value>截屏</value></data>
+  <data name="ButtonsLabel.Text" xml:space="preserve"><value>按键</value></data>
+  <data name="ChargingLabel.Text" xml:space="preserve"><value>充电状态</value></data>
+  <data name="SticksHeader.Text" xml:space="preserve"><value>模拟摇杆</value></data>
+  <data name="LeftStick.Text" xml:space="preserve"><value>左摇杆</value></data>
+  <data name="RightStick.Text" xml:space="preserve"><value>右摇杆</value></data>
+  <data name="MotionHeader.Text" xml:space="preserve"><value>运动传感器 · 原始数值</value></data>
+  <data name="ReadingInput" xml:space="preserve"><value>正在读取控制器输入...</value></data>
+  <data name="InputReadSucceeded" xml:space="preserve"><value>控制器输入已更新</value></data>
+  <data name="InputStreamStarted" xml:space="preserve"><value>正在连续读取控制器输入</value></data>
+  <data name="InputStreamStopping" xml:space="preserve"><value>正在停止连续读取...</value></data>
+  <data name="InputStreamStopped" xml:space="preserve"><value>已停止连续读取控制器输入</value></data>
+  <data name="Yes" xml:space="preserve"><value>是</value></data>
+  <data name="No" xml:space="preserve"><value>否</value></data>
+  <data name="IrHeader.Text" xml:space="preserve"><value>红外摄像头</value></data>
+  <data name="CaptureIr.Content" xml:space="preserve"><value>拍照</value></data>
+  <data name="SaveIrImage.Content" xml:space="preserve"><value>保存</value></data>
+  <data name="StartIrStream.Content" xml:space="preserve"><value>开始视频流</value></data>
+  <data name="StopIrStream.Content" xml:space="preserve"><value>停止视频流</value></data>
+  <data name="IrPreviewEmpty.Text" xml:space="preserve"><value>尚未捕获红外图像</value></data>
+  <data name="IrPreviewAutomationName" xml:space="preserve"><value>红外摄像头预览</value></data>
+  <data name="IrSettingsHeader.Text" xml:space="preserve"><value>摄像头设置</value></data>
+  <data name="IrResolution.Header" xml:space="preserve"><value>分辨率</value></data>
+  <data name="IrExposure.Header" xml:space="preserve"><value>曝光时间（微秒）</value></data>
+  <data name="IrGain.Text" xml:space="preserve"><value>数字增益</value></data>
+  <data name="IrColorMode.Header" xml:space="preserve"><value>显示模式</value></data>
+  <data name="IrGrayscale.Content" xml:space="preserve"><value>灰度</value></data>
+  <data name="IrNightVision.Content" xml:space="preserve"><value>夜视</value></data>
+  <data name="IrInfrared.Content" xml:space="preserve"><value>红外</value></data>
+  <data name="IrLeds.Header" xml:space="preserve"><value>红外补光</value></data>
+  <data name="IrExternalFilter.Header" xml:space="preserve"><value>外部光线滤波</value></data>
+  <data name="IrDenoise.Header" xml:space="preserve"><value>降噪</value></data>
+  <data name="IrFlip.Header" xml:space="preserve"><value>水平翻转</value></data>
+  <data name="IrFrameStatsHeader.Text" xml:space="preserve"><value>帧统计</value></data>
+  <data name="IrNoFrameStats.Text" xml:space="preserve"><value>捕获图像后显示传感器统计数据。</value></data>
+  <data name="IrStatsFormat" xml:space="preserve"><value>第 {0} 帧 · {1} × {2} · 平均亮度 {3}/255 · 白色像素 {4} · 环境光像素 {5}</value></data>
+  <data name="IrRequiresRightJoyCon" xml:space="preserve"><value>红外摄像头仅适用于 Joy-Con (R)</value></data>
+  <data name="IrCapturing" xml:space="preserve"><value>正在捕获红外图像...</value></data>
+  <data name="IrStreaming" xml:space="preserve"><value>红外摄像头视频流正在运行</value></data>
+  <data name="IrFrameReceivedFormat" xml:space="preserve"><value>已接收红外图像第 {0} 帧</value></data>
+  <data name="IrCaptureCompleted" xml:space="preserve"><value>红外图像捕获完成</value></data>
+  <data name="IrStopping" xml:space="preserve"><value>正在停止红外摄像头...</value></data>
+  <data name="IrStopped" xml:space="preserve"><value>红外摄像头已停止</value></data>
+  <data name="NfcHeader.Text" xml:space="preserve"><value>NFC 标签读取器</value></data>
+  <data name="StartNfcScan.Content" xml:space="preserve"><value>扫描标签</value></data>
+  <data name="StopNfcScan.Content" xml:space="preserve"><value>停止扫描</value></data>
+  <data name="NfcTagHeader.Text" xml:space="preserve"><value>检测到的标签</value></data>
+  <data name="NfcUidLabel.Text" xml:space="preserve"><value>UID</value></data>
+  <data name="NfcTypeLabel.Text" xml:space="preserve"><value>标签类型</value></data>
+  <data name="NfcParsedContentHeader.Text" xml:space="preserve"><value>解析内容</value></data>
+  <data name="NfcRawContentHeader.Text" xml:space="preserve"><value>NTAG 原始页数据</value></data>
+  <data name="NfcUnknownTag" xml:space="preserve"><value>未知标签</value></data>
+  <data name="NfcUriRecord" xml:space="preserve"><value>NDEF URI 记录</value></data>
+  <data name="NfcTextRecord" xml:space="preserve"><value>NDEF 文本记录</value></data>
+  <data name="NfcNoNdefContent" xml:space="preserve"><value>未找到支持的 NDEF 文本或 URI 记录</value></data>
+  <data name="NfcMifareUnsupported" xml:space="preserve"><value>暂不支持读取 MIFARE 标签内容</value></data>
+  <data name="NfcRequiresRightJoyConOrPro" xml:space="preserve"><value>NFC 仅适用于 Joy-Con (R) 或 Pro Controller</value></data>
+  <data name="NfcScanning" xml:space="preserve"><value>正在等待 NFC 标签...</value></data>
+  <data name="NfcTagRead" xml:space="preserve"><value>NFC 标签读取完成</value></data>
+  <data name="NfcStopping" xml:space="preserve"><value>正在停止 NFC 扫描...</value></data>
+  <data name="NfcStopped" xml:space="preserve"><value>NFC 扫描已停止</value></data>
+  <data name="DiagnosticsHeader.Text" xml:space="preserve"><value>诊断</value></data>
+  <data name="DiagnosticCommandHeader.Text" xml:space="preserve"><value>安全命令控制台</value></data>
+  <data name="DiagnosticMode.Header" xml:space="preserve"><value>命令类别</value></data>
+  <data name="DiagnosticModeDebug.Content" xml:space="preserve"><value>Debug 白名单</value></data>
+  <data name="DiagnosticModeInternal.Content" xml:space="preserve"><value>内部命令白名单</value></data>
+  <data name="DiagnosticCommand.Header" xml:space="preserve"><value>报告类型</value></data>
+  <data name="DiagnosticRumble.Header" xml:space="preserve"><value>震动（4 字节）</value></data>
+  <data name="DiagnosticSubcommand.Header" xml:space="preserve"><value>子命令</value></data>
+  <data name="DiagnosticArguments.Header" xml:space="preserve"><value>参数（十六进制）</value></data>
+  <data name="SendDiagnostic.Content" xml:space="preserve"><value>发送</value></data>
+  <data name="DiagnosticReply.Header" xml:space="preserve"><value>回复</value></data>
+  <data name="InternalPresetsHeader.Text" xml:space="preserve"><value>内部操作</value></data>
+  <data name="InternalPresetsWarning.Text" xml:space="preserve"><value>这些操作可能修改配对或出货状态，每项操作都需要确认。</value></data>
+  <data name="SetShipment.Content" xml:space="preserve"><value>设置出货模式</value></data>
+  <data name="ClearPairing.Content" xml:space="preserve"><value>清除配对数据</value></data>
+  <data name="RebootPairing.Content" xml:space="preserve"><value>重启并进入配对</value></data>
+  <data name="ConfirmInternalCommandTitle" xml:space="preserve"><value>运行内部控制器操作？</value></data>
+  <data name="SetShipmentConfirm" xml:space="preserve"><value>这会向所选控制器写入出货状态命令。</value></data>
+  <data name="ClearPairingConfirm" xml:space="preserve"><value>这会清除控制器配对数据，之后需要重新配对。</value></data>
+  <data name="RebootPairingConfirm" xml:space="preserve"><value>这会重启所选控制器并请求进入配对模式。</value></data>
+  <data name="DiagnosticEnvironmentFormat" xml:space="preserve"><value>进程 {0} · Windows {1} · 有效 DPI {2} · 基目录 {3}</value></data>
+  <data name="EnvironmentHeader.Text" xml:space="preserve"><value>运行环境</value></data>
+  <data name="DiagnosticSafetyNote.Text" xml:space="preserve"><value>只有原生硬件安全白名单中的命令会被接受。固件升级、SPI 写入和任意 MCU 负载会在 HID 输出前被拒绝。</value></data>
+  <data name="DiagnosticByteInvalid" xml:space="preserve"><value>报告类型和子命令必须是一个十六进制字节</value></data>
+  <data name="DiagnosticHexInvalid" xml:space="preserve"><value>请使用空格分隔的两位十六进制字节，并控制在允许长度内</value></data>
+  <data name="DiagnosticAccepted" xml:space="preserve"><value>诊断命令已接受</value></data>
+  <data name="DiagnosticReplyReceived" xml:space="preserve"><value>已收到诊断回复</value></data>
+  <data name="DiagnosticOperationFailedFormat" xml:space="preserve"><value>诊断命令失败（{0}）</value></data>
+  <data name="DiagnosticSentLabel" xml:space="preserve"><value>已发送</value></data>
+  <data name="DiagnosticReceivedLabel" xml:space="preserve"><value>已接收</value></data>
+  <data name="DiagnosticNoReply" xml:space="preserve"><value>无回复</value></data>
+  <data name="DiagnosticReplyStateFormat" xml:space="preserve"><value>匹配：{0} · 接受：{1}</value></data>
+  <data name="RunHardwarePreflight.Content" xml:space="preserve"><value>运行硬件预检</value></data>
+  <data name="HardwarePreflightRunning" xml:space="preserve"><value>正在运行硬件预检...</value></data>
+  <data name="HardwarePreflightPassed" xml:space="preserve"><value>硬件预检通过</value></data>
+  <data name="HardwarePreflightFailedFormat" xml:space="preserve"><value>硬件预检失败（{0}）：{1}</value></data>
+  <data name="HardwarePreflightInputStep" xml:space="preserve"><value>控制器输入</value></data>
+  <data name="HardwarePreflightSpiStep" xml:space="preserve"><value>SPI 读取</value></data>
+  <data name="HardwarePreflightDiagnosticStep" xml:space="preserve"><value>安全诊断命令</value></data>
+  <data name="HardwarePreflightAllowlistStep" xml:space="preserve"><value>不安全命令拒绝</value></data>
+  <data name="HardwarePreflightIrStep" xml:space="preserve"><value>红外摄像头启停</value></data>
+  <data name="HardwarePreflightNfcStep" xml:space="preserve"><value>NFC 取消</value></data>
+  <data name="FullRestoreFinalizing" xml:space="preserve"><value>正在完成完整恢复...</value></data>
+  <data name="FullRestoreFinalized" xml:space="preserve"><value>完整恢复收尾命令已发送</value></data>
+  <data name="FinalizeRestore.Content" xml:space="preserve"><value>完成收尾：出货 + 清配对 + 重启</value></data>
+  <data name="ConfirmFullRestoreFinalizeTitle" xml:space="preserve"><value>完成完整恢复收尾？</value></data>
+  <data name="FullRestoreFinalizeWarning" xml:space="preserve"><value>这会发送旧版内部命令序列：设置出货状态、清除配对数据，然后重启进入配对模式。控制器之后需要重新配对。</value></data>
+</root>

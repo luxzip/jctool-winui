@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <resheader name="resmimetype"><value>text/microsoft-resx</value></resheader>
+  <resheader name="version"><value>2.0</value></resheader>
+  <resheader name="reader"><value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <resheader name="writer"><value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value></resheader>
+  <data name="AppTitle.Text" xml:space="preserve"><value>Joy-Con Toolkit</value></data>
+  <data name="WindowTitle" xml:space="preserve"><value>Joy-Con Toolkit</value></data>
+  <data name="RefreshControllers" xml:space="preserve"><value>Refresh controllers</value></data>
+  <data name="NavOverview.Content" xml:space="preserve"><value>Overview</value></data>
+  <data name="NavColors.Content" xml:space="preserve"><value>Colors &amp; SPI</value></data>
+  <data name="NavCalibration.Content" xml:space="preserve"><value>Calibration</value></data>
+  <data name="NavRumble.Content" xml:space="preserve"><value>HD Rumble</value></data>
+  <data name="NavInput.Content" xml:space="preserve"><value>Input test</value></data>
+  <data name="NavIr.Content" xml:space="preserve"><value>IR camera</value></data>
+  <data name="NavNfc.Content" xml:space="preserve"><value>NFC</value></data>
+  <data name="NavDiagnostics.Content" xml:space="preserve"><value>Diagnostics</value></data>
+  <data name="FooterSession.Text" xml:space="preserve"><value>Protected writes</value></data>
+  <data name="OverviewHeader.Text" xml:space="preserve"><value>Controller overview</value></data>
+  <data name="ActiveControllerLabel.Text" xml:space="preserve"><value>ACTIVE CONTROLLER</value></data>
+  <data name="ConnectionLabel.Text" xml:space="preserve"><value>CONNECTION</value></data>
+  <data name="ConnectionValue.Text" xml:space="preserve"><value>Bluetooth / USB HID</value></data>
+  <data name="SessionLabel.Text" xml:space="preserve"><value>SESSION</value></data>
+  <data name="SessionValue.Text" xml:space="preserve"><value>Verified operations</value></data>
+  <data name="FirmwareLabel.Text" xml:space="preserve"><value>FIRMWARE</value></data>
+  <data name="BatteryLabel.Text" xml:space="preserve"><value>BATTERY</value></data>
+  <data name="NotRead.Text" xml:space="preserve"><value>Not read</value></data>
+  <data name="ProtectedSession.Text" xml:space="preserve"><value>Write protection</value></data>
+  <data name="SpiWrites.Text" xml:space="preserve"><value>SPI writes</value></data>
+  <data name="CalibrationWrites.Text" xml:space="preserve"><value>Calibration writes</value></data>
+  <data name="Off.Text" xml:space="preserve"><value>Off</value></data>
+  <data name="ColorWriteGuard.Text" xml:space="preserve"><value>Confirmation required</value></data>
+  <data name="CalibrationWriteGuard.Text" xml:space="preserve"><value>Read verification required</value></data>
+  <data name="NoActiveTasks.Text" xml:space="preserve"><value>No active tasks</value></data>
+  <data name="WaitingOperation.Text" xml:space="preserve"><value>Waiting for an operation.</value></data>
+  <data name="Idle.Text" xml:space="preserve"><value>Idle</value></data>
+  <data name="Ready" xml:space="preserve"><value>Ready</value></data>
+  <data name="EmptySlot" xml:space="preserve"><value>Empty slot</value></data>
+  <data name="NoControllerDetected" xml:space="preserve"><value>No controller detected</value></data>
+  <data name="Disconnected" xml:space="preserve"><value>Disconnected</value></data>
+  <data name="Connected" xml:space="preserve"><value>Connected</value></data>
+  <data name="SlotFormat" xml:space="preserve"><value>SLOT {0}</value></data>
+  <data name="NoControllerSelected" xml:space="preserve"><value>No controller selected</value></data>
+  <data name="ConnectThenRefresh" xml:space="preserve"><value>Connect a controller, then refresh.</value></data>
+  <data name="ScanningControllers" xml:space="preserve"><value>Scanning for controllers...</value></data>
+  <data name="NoControllersDetected" xml:space="preserve"><value>No controllers detected</value></data>
+  <data name="ControllersConnectedFormat" xml:space="preserve"><value>{0} controllers connected</value></data>
+  <data name="OneControllerConnected" xml:space="preserve"><value>1 controller connected</value></data>
+  <data name="ControllerScanCancelled" xml:space="preserve"><value>Controller scan cancelled</value></data>
+  <data name="SelectedControllerFormat" xml:space="preserve"><value>Selected {0}</value></data>
+  <data name="BridgeUnavailable" xml:space="preserve"><value>Native device bridge is unavailable</value></data>
+  <data name="BridgeArchitectureMismatch" xml:space="preserve"><value>Native device bridge architecture does not match</value></data>
+  <data name="BridgeIncompatible" xml:space="preserve"><value>Native device bridge is incompatible</value></data>
+  <data name="ControllerScanFailed" xml:space="preserve"><value>Controller scan failed</value></data>
+  <data name="SerialUnavailable" xml:space="preserve"><value>Serial number unavailable</value></data>
+  <data name="NintendoController" xml:space="preserve"><value>Nintendo controller</value></data>
+  <data name="NotReadValue" xml:space="preserve"><value>Not read</value></data>
+  <data name="BatteryFormat" xml:space="preserve"><value>{0}% · {1:F2} V</value></data>
+  <data name="TemperatureFormat" xml:space="preserve"><value>{0:F1} °C</value></data>
+  <data name="MacLabel.Text" xml:space="preserve"><value>MAC ADDRESS</value></data>
+  <data name="TemperatureLabel.Text" xml:space="preserve"><value>TEMPERATURE</value></data>
+  <data name="SelectControllerFirst" xml:space="preserve"><value>Select a connected controller first</value></data>
+  <data name="Working" xml:space="preserve"><value>Working...</value></data>
+  <data name="CancelOperation" xml:space="preserve"><value>Cancel current operation</value></data>
+  <data name="OperationCancelling" xml:space="preserve"><value>Cancelling current operation...</value></data>
+  <data name="OperationCancelled" xml:space="preserve"><value>Operation cancelled</value></data>
+  <data name="IdentifySucceeded" xml:space="preserve"><value>Identification vibration sent</value></data>
+  <data name="ColorsWritten" xml:space="preserve"><value>Controller colors written and verified</value></data>
+  <data name="ReadingSpi" xml:space="preserve"><value>Reading SPI...</value></data>
+  <data name="SpiReadSucceededFormat" xml:space="preserve"><value>Read {0} SPI bytes</value></data>
+  <data name="OperationFailedFormat" xml:space="preserve"><value>Operation failed: {0}</value></data>
+  <data name="NativeOperationFailedFormat" xml:space="preserve"><value>Device returned error {0}</value></data>
+  <data name="IdentifyController" xml:space="preserve"><value>Identify controller</value></data>
+  <data name="ColorsHeader.Text" xml:space="preserve"><value>Colors &amp; SPI</value></data>
+  <data name="ColorEditorHeader.Text" xml:space="preserve"><value>Controller colors</value></data>
+  <data name="ColorTarget.Header" xml:space="preserve"><value>Color target</value></data>
+  <data name="ColorBody.Content" xml:space="preserve"><value>Body</value></data>
+  <data name="ColorButtons.Content" xml:space="preserve"><value>Buttons</value></data>
+  <data name="ColorLeftGrip.Content" xml:space="preserve"><value>Left grip</value></data>
+  <data name="ColorRightGrip.Content" xml:space="preserve"><value>Right grip</value></data>
+  <data name="ColorHex.Header" xml:space="preserve"><value>Hex color</value></data>
+  <data name="ReloadColors.Content" xml:space="preserve"><value>Reload</value></data>
+  <data name="ReloadColorsTooltip" xml:space="preserve"><value>Reload colors from controller</value></data>
+  <data name="WriteColors.Content" xml:space="preserve"><value>Write colors</value></data>
+  <data name="ConfirmColorWriteTitle" xml:space="preserve"><value>Write controller colors?</value></data>
+  <data name="ConfirmColorWriteLine1" xml:space="preserve"><value>The current color values will be written to controller SPI.</value></data>
+  <data name="ConfirmColorWriteLine2" xml:space="preserve"><value>Create an SPI backup before changing hardware data.</value></data>
+  <data name="Continue" xml:space="preserve"><value>Continue</value></data>
+  <data name="Cancel" xml:space="preserve"><value>Cancel</value></data>
+  <data name="SpiToolsHeader.Text" xml:space="preserve"><value>SPI reader</value></data>
+  <data name="SpiAddress.Header" xml:space="preserve"><value>Address</value></data>
+  <data name="SpiLength.Header" xml:space="preserve"><value>Length</value></data>
+  <data name="ReadSpi.Content" xml:space="preserve"><value>Read</value></data>
+  <data name="SpiOutput.Header" xml:space="preserve"><value>Hex output</value></data>
+  <data name="SpiBackupHeader.Text" xml:space="preserve"><value>SPI backup and restore</value></data>
+  <data name="CreateSpiBackup.Content" xml:space="preserve"><value>Create backup</value></data>
+  <data name="LoadSpiBackup.Content" xml:space="preserve"><value>Load backup</value></data>
+  <data name="RestoreScope.Header" xml:space="preserve"><value>Restore scope</value></data>
+  <data name="RestoreColors.Content" xml:space="preserve"><value>Colors</value></data>
+  <data name="RestoreSerial.Content" xml:space="preserve"><value>Serial number</value></data>
+  <data name="RestoreCalibration.Content" xml:space="preserve"><value>User calibration</value></data>
+  <data name="RestoreFull.Content" xml:space="preserve"><value>Full safe restore</value></data>
+  <data name="SerialNumber.Header" xml:space="preserve"><value>New serial number</value></data>
+  <data name="WriteSerial.Content" xml:space="preserve"><value>Write serial</value></data>
+  <data name="RestoreBackup.Content" xml:space="preserve"><value>Restore selected scope</value></data>
+  <data name="SpiBackupDisclaimer.Text" xml:space="preserve"><value>Only same-product, same-controller backups with a matching SHA-256 sidecar can be restored. Full restore does not reboot or change pairing state.</value></data>
+  <data name="SpiBackupNotLoaded" xml:space="preserve"><value>No backup loaded</value></data>
+  <data name="SpiBackupHashFormat" xml:space="preserve"><value>SHA-256 {0} · {1}</value></data>
+  <data name="ChecksumVerified" xml:space="preserve"><value>checksum verified</value></data>
+  <data name="ChecksumMissing" xml:space="preserve"><value>checksum sidecar missing</value></data>
+  <data name="SpiBackupChecksumMissing" xml:space="preserve"><value>A SHA-256 sidecar is required before restoring a backup</value></data>
+  <data name="SpiBackupSizeInvalid" xml:space="preserve"><value>Backup must be exactly 512 KiB</value></data>
+  <data name="SpiBackupProductMismatch" xml:space="preserve"><value>Backup controller type does not match the selected controller</value></data>
+  <data name="SpiBackupControllerMismatch" xml:space="preserve"><value>Backup Bluetooth identity does not match the selected controller</value></data>
+  <data name="SpiBackupChecksumInvalid" xml:space="preserve"><value>Backup checksum does not match its sidecar</value></data>
+  <data name="SpiBackupReady" xml:space="preserve"><value>Verified backup ready</value></data>
+  <data name="SpiBackupVerificationFailed" xml:space="preserve"><value>SPI backup verification failed while reading</value></data>
+  <data name="SpiBackupCreating" xml:space="preserve"><value>Creating and verifying SPI backup...</value></data>
+  <data name="SpiBackupCreated" xml:space="preserve"><value>SPI backup created and verified</value></data>
+  <data name="SpiRestoreWriting" xml:space="preserve"><value>Writing and verifying SPI restore...</value></data>
+  <data name="SpiRestoreCompleted" xml:space="preserve"><value>SPI restore completed and verified</value></data>
+  <data name="ConfirmSpiRestoreTitle" xml:space="preserve"><value>Restore SPI data?</value></data>
+  <data name="SpiRestoreWarningLine1" xml:space="preserve"><value>Selected values will be written to controller SPI and read back for verification.</value></data>
+  <data name="SpiRestoreFullWarningLine2" xml:space="preserve"><value>Full restore replaces factory/user configuration ranges and erases the internal serial backup area. Do not disconnect the controller.</value></data>
+  <data name="SpiRestoreWarningLine2" xml:space="preserve"><value>Incorrect data can make the controller unusable until a known-good backup is restored.</value></data>
+  <data name="ConfirmSerialWriteTitle" xml:space="preserve"><value>Write serial number?</value></data>
+  <data name="SerialWriteWarning" xml:space="preserve"><value>This changes the controller serial number. Create and keep a verified SPI backup first.</value></data>
+  <data name="SerialNumberInvalid" xml:space="preserve"><value>Use 1-15 printable ASCII characters for the serial number</value></data>
+  <data name="SerialNumberProUnsupported" xml:space="preserve"><value>Serial number writing is not supported for Pro Controller</value></data>
+  <data name="SerialNumberWritten" xml:space="preserve"><value>Serial number written and verified</value></data>
+  <data name="InvalidSpiAddress" xml:space="preserve"><value>Enter a hexadecimal SPI address from 00000 to 7FFFF</value></data>
+  <data name="SettingsHeader.Text" xml:space="preserve"><value>Settings</value></data>
+  <data name="LanguageHeader.Text" xml:space="preserve"><value>Interface language</value></data>
+  <data name="LanguagePicker.Header" xml:space="preserve"><value>Language</value></data>
+  <data name="LanguageSystem.Content" xml:space="preserve"><value>Use system language</value></data>
+  <data name="LanguageChinese.Content" xml:space="preserve"><value>简体中文</value></data>
+  <data name="LanguageEnglish.Content" xml:space="preserve"><value>English</value></data>
+  <data name="ApplyLanguage.Content" xml:space="preserve"><value>Apply and restart</value></data>
+  <data name="RestartFailed" xml:space="preserve"><value>The application could not restart automatically</value></data>
+  <data name="CalibrationHeader.Text" xml:space="preserve"><value>Calibration</value></data>
+  <data name="ReadCalibration.Content" xml:space="preserve"><value>Read calibration</value></data>
+  <data name="LeftStickHeader.Text" xml:space="preserve"><value>Left stick user calibration</value></data>
+  <data name="RightStickHeader.Text" xml:space="preserve"><value>Right stick user calibration</value></data>
+  <data name="Minimum.Text" xml:space="preserve"><value>Minimum</value></data>
+  <data name="Center.Text" xml:space="preserve"><value>Center</value></data>
+  <data name="Maximum.Text" xml:space="preserve"><value>Maximum</value></data>
+  <data name="SensorHeader.Text" xml:space="preserve"><value>6-axis user calibration</value></data>
+  <data name="Accelerometer.Text" xml:space="preserve"><value>Accel</value></data>
+  <data name="Gyroscope.Text" xml:space="preserve"><value>Gyro</value></data>
+  <data name="StickParametersHeader.Text" xml:space="preserve"><value>Stick device parameters</value></data>
+  <data name="Deadzone.Header" xml:space="preserve"><value>Main deadzone</value></data>
+  <data name="RangeRatio.Header" xml:space="preserve"><value>Main range ratio</value></data>
+  <data name="SecondDeadzone.Header" xml:space="preserve"><value>Right deadzone</value></data>
+  <data name="SecondRangeRatio.Header" xml:space="preserve"><value>Right range ratio</value></data>
+  <data name="WriteParameters.Content" xml:space="preserve"><value>Write parameters</value></data>
+  <data name="WriteCalibration.Content" xml:space="preserve"><value>Write calibration</value></data>
+  <data name="Enabled" xml:space="preserve"><value>Enabled</value></data>
+  <data name="Disabled" xml:space="preserve"><value>Disabled</value></data>
+  <data name="CalibrationNotRead" xml:space="preserve"><value>Read and verify the selected controller before writing.</value></data>
+  <data name="CalibrationReadFailed" xml:space="preserve"><value>Calibration data could not be read completely. Writing remains disabled.</value></data>
+  <data name="CalibrationReady" xml:space="preserve"><value>Calibration data is verified for the selected controller.</value></data>
+  <data name="CalibrationIdentityChanged" xml:space="preserve"><value>The selected controller changed. Read calibration again before writing.</value></data>
+  <data name="CalibrationOrderInvalid" xml:space="preserve"><value>Each enabled stick axis must satisfy minimum &lt; center &lt; maximum.</value></data>
+  <data name="ConfirmCalibrationTitle" xml:space="preserve"><value>Write user calibration?</value></data>
+  <data name="ConfirmCalibrationLine1" xml:space="preserve"><value>The displayed user calibration will be written to controller SPI.</value></data>
+  <data name="ConfirmCalibrationLine2" xml:space="preserve"><value>Incorrect values can make the controller unusable until calibration is restored.</value></data>
+  <data name="ConfirmParametersTitle" xml:space="preserve"><value>Write stick device parameters?</value></data>
+  <data name="ConfirmParametersLine1" xml:space="preserve"><value>These values normally come from the factory.</value></data>
+  <data name="ConfirmParametersLine2" xml:space="preserve"><value>Only continue when you have verified replacement values.</value></data>
+  <data name="CalibrationWritten" xml:space="preserve"><value>User calibration written and verified</value></data>
+  <data name="ParametersWritten" xml:space="preserve"><value>Stick parameters written and verified</value></data>
+  <data name="CalibrationWriteFailed" xml:space="preserve"><value>Calibration write failed. Read the controller again before retrying.</value></data>
+  <data name="RumbleHeader.Text" xml:space="preserve"><value>HD Rumble</value></data>
+  <data name="NoRumbleFile.Text" xml:space="preserve"><value>No file loaded</value></data>
+  <data name="RawRumbleFormat.Text" xml:space="preserve"><value>Raw HD Rumble · .jcvib</value></data>
+  <data name="BinaryRumbleFormat.Text" xml:space="preserve"><value>Binary HD Rumble · .bnvib</value></data>
+  <data name="LoopRumbleFormat.Text" xml:space="preserve"><value>Looping binary HD Rumble · .bnvib</value></data>
+  <data name="LoopWaitRumbleFormat.Text" xml:space="preserve"><value>Looping/waiting binary HD Rumble · .bnvib</value></data>
+  <data name="LoadRumble.Content" xml:space="preserve"><value>Load</value></data>
+  <data name="RumbleLowFrequency.Text" xml:space="preserve"><value>Low frequency</value></data>
+  <data name="RumbleHighFrequency.Text" xml:space="preserve"><value>High frequency</value></data>
+  <data name="RumbleEqualizerHeader.Text" xml:space="preserve"><value>Equalizer</value></data>
+  <data name="RumbleAmplitude.Text" xml:space="preserve"><value>Amplitude</value></data>
+  <data name="RumblePitch.Text" xml:space="preserve"><value>Frequency</value></data>
+  <data name="RumbleLoopCount.Header" xml:space="preserve"><value>Extra loop cycles</value></data>
+  <data name="RumbleConvert.Content" xml:space="preserve"><value>Apply equalizer</value></data>
+  <data name="RumbleConvertReady" xml:space="preserve"><value>Binary rumble will be converted with the current equalizer on play</value></data>
+  <data name="PlaybackStatus.Text" xml:space="preserve"><value>PLAYBACK</value></data>
+  <data name="RumbleReady.Text" xml:space="preserve"><value>Ready</value></data>
+  <data name="Play.Content" xml:space="preserve"><value>Play</value></data>
+  <data name="Stop.Content" xml:space="preserve"><value>Stop</value></data>
+  <data name="InvalidRumbleFile" xml:space="preserve"><value>Invalid or truncated RRAW file</value></data>
+  <data name="RumbleDetailsFormat" xml:space="preserve"><value>{0} samples · {1} ms · {2:F2} s</value></data>
+  <data name="RumblePlaying" xml:space="preserve"><value>Playing HD Rumble...</value></data>
+  <data name="RumbleStopping" xml:space="preserve"><value>Stopping playback...</value></data>
+  <data name="RumbleCompleted" xml:space="preserve"><value>Playback completed</value></data>
+  <data name="RumbleStopped" xml:space="preserve"><value>Playback stopped</value></data>
+  <data name="ControllerBusy" xml:space="preserve"><value>The selected controller is busy</value></data>
+  <data name="InputHeader.Text" xml:space="preserve"><value>Input test</value></data>
+  <data name="ReadInput.Content" xml:space="preserve"><value>Read input</value></data>
+  <data name="StartInputStream.Content" xml:space="preserve"><value>Start input stream</value></data>
+  <data name="StopInputStream.Content" xml:space="preserve"><value>Stop input stream</value></data>
+  <data name="InputStatusHeader.Text" xml:space="preserve"><value>Controller state</value></data>
+  <data name="ButtonVisualizerHeader.Text" xml:space="preserve"><value>Button state</value></data>
+  <data name="ButtonMinus" xml:space="preserve"><value>Minus</value></data>
+  <data name="ButtonPlus" xml:space="preserve"><value>Plus</value></data>
+  <data name="ButtonLeftStick" xml:space="preserve"><value>L Stick</value></data>
+  <data name="ButtonRightStick" xml:space="preserve"><value>R Stick</value></data>
+  <data name="ButtonUp" xml:space="preserve"><value>Up</value></data>
+  <data name="ButtonDown" xml:space="preserve"><value>Down</value></data>
+  <data name="ButtonLeft" xml:space="preserve"><value>Left</value></data>
+  <data name="ButtonRight" xml:space="preserve"><value>Right</value></data>
+  <data name="ButtonHome" xml:space="preserve"><value>HOME</value></data>
+  <data name="ButtonCapture" xml:space="preserve"><value>Capture</value></data>
+  <data name="ButtonsLabel.Text" xml:space="preserve"><value>BUTTONS</value></data>
+  <data name="ChargingLabel.Text" xml:space="preserve"><value>CHARGING</value></data>
+  <data name="SticksHeader.Text" xml:space="preserve"><value>Analog sticks</value></data>
+  <data name="LeftStick.Text" xml:space="preserve"><value>Left stick</value></data>
+  <data name="RightStick.Text" xml:space="preserve"><value>Right stick</value></data>
+  <data name="MotionHeader.Text" xml:space="preserve"><value>Motion sensors · raw values</value></data>
+  <data name="ReadingInput" xml:space="preserve"><value>Reading controller input...</value></data>
+  <data name="InputReadSucceeded" xml:space="preserve"><value>Controller input updated</value></data>
+  <data name="InputStreamStarted" xml:space="preserve"><value>Live controller input is running</value></data>
+  <data name="InputStreamStopping" xml:space="preserve"><value>Stopping live controller input...</value></data>
+  <data name="InputStreamStopped" xml:space="preserve"><value>Live controller input stopped</value></data>
+  <data name="Yes" xml:space="preserve"><value>Yes</value></data>
+  <data name="No" xml:space="preserve"><value>No</value></data>
+  <data name="IrHeader.Text" xml:space="preserve"><value>IR camera</value></data>
+  <data name="CaptureIr.Content" xml:space="preserve"><value>Capture</value></data>
+  <data name="SaveIrImage.Content" xml:space="preserve"><value>Save</value></data>
+  <data name="StartIrStream.Content" xml:space="preserve"><value>Start stream</value></data>
+  <data name="StopIrStream.Content" xml:space="preserve"><value>Stop stream</value></data>
+  <data name="IrPreviewEmpty.Text" xml:space="preserve"><value>No IR frame captured</value></data>
+  <data name="IrPreviewAutomationName" xml:space="preserve"><value>IR camera preview</value></data>
+  <data name="IrSettingsHeader.Text" xml:space="preserve"><value>Camera settings</value></data>
+  <data name="IrResolution.Header" xml:space="preserve"><value>Resolution</value></data>
+  <data name="IrExposure.Header" xml:space="preserve"><value>Exposure (µs)</value></data>
+  <data name="IrGain.Text" xml:space="preserve"><value>Digital gain</value></data>
+  <data name="IrColorMode.Header" xml:space="preserve"><value>Display mode</value></data>
+  <data name="IrGrayscale.Content" xml:space="preserve"><value>Grayscale</value></data>
+  <data name="IrNightVision.Content" xml:space="preserve"><value>Night vision</value></data>
+  <data name="IrInfrared.Content" xml:space="preserve"><value>Infrared</value></data>
+  <data name="IrLeds.Header" xml:space="preserve"><value>IR illumination</value></data>
+  <data name="IrExternalFilter.Header" xml:space="preserve"><value>External light filter</value></data>
+  <data name="IrDenoise.Header" xml:space="preserve"><value>Denoise</value></data>
+  <data name="IrFlip.Header" xml:space="preserve"><value>Flip horizontally</value></data>
+  <data name="IrFrameStatsHeader.Text" xml:space="preserve"><value>Frame statistics</value></data>
+  <data name="IrNoFrameStats.Text" xml:space="preserve"><value>Capture a frame to view sensor statistics.</value></data>
+  <data name="IrStatsFormat" xml:space="preserve"><value>Frame {0} · {1} × {2} · average {3}/255 · white pixels {4} · ambient pixels {5}</value></data>
+  <data name="IrRequiresRightJoyCon" xml:space="preserve"><value>The IR camera requires Joy-Con (R)</value></data>
+  <data name="IrCapturing" xml:space="preserve"><value>Capturing an IR frame...</value></data>
+  <data name="IrStreaming" xml:space="preserve"><value>IR camera stream is running</value></data>
+  <data name="IrFrameReceivedFormat" xml:space="preserve"><value>IR frame {0} received</value></data>
+  <data name="IrCaptureCompleted" xml:space="preserve"><value>IR frame captured</value></data>
+  <data name="IrStopping" xml:space="preserve"><value>Stopping IR camera...</value></data>
+  <data name="IrStopped" xml:space="preserve"><value>IR camera stopped</value></data>
+  <data name="NfcHeader.Text" xml:space="preserve"><value>NFC tag reader</value></data>
+  <data name="StartNfcScan.Content" xml:space="preserve"><value>Scan tag</value></data>
+  <data name="StopNfcScan.Content" xml:space="preserve"><value>Stop scan</value></data>
+  <data name="NfcTagHeader.Text" xml:space="preserve"><value>Detected tag</value></data>
+  <data name="NfcUidLabel.Text" xml:space="preserve"><value>UID</value></data>
+  <data name="NfcTypeLabel.Text" xml:space="preserve"><value>Tag type</value></data>
+  <data name="NfcParsedContentHeader.Text" xml:space="preserve"><value>Parsed content</value></data>
+  <data name="NfcRawContentHeader.Text" xml:space="preserve"><value>Raw NTAG pages</value></data>
+  <data name="NfcUnknownTag" xml:space="preserve"><value>Unknown tag</value></data>
+  <data name="NfcUriRecord" xml:space="preserve"><value>NDEF URI record</value></data>
+  <data name="NfcTextRecord" xml:space="preserve"><value>NDEF text record</value></data>
+  <data name="NfcNoNdefContent" xml:space="preserve"><value>No supported NDEF text or URI record was found</value></data>
+  <data name="NfcMifareUnsupported" xml:space="preserve"><value>MIFARE content reading is not supported</value></data>
+  <data name="NfcRequiresRightJoyConOrPro" xml:space="preserve"><value>NFC requires Joy-Con (R) or Pro Controller</value></data>
+  <data name="NfcScanning" xml:space="preserve"><value>Waiting for an NFC tag...</value></data>
+  <data name="NfcTagRead" xml:space="preserve"><value>NFC tag read</value></data>
+  <data name="NfcStopping" xml:space="preserve"><value>Stopping NFC scan...</value></data>
+  <data name="NfcStopped" xml:space="preserve"><value>NFC scan stopped</value></data>
+  <data name="DiagnosticsHeader.Text" xml:space="preserve"><value>Diagnostics</value></data>
+  <data name="DiagnosticCommandHeader.Text" xml:space="preserve"><value>Safe command console</value></data>
+  <data name="DiagnosticMode.Header" xml:space="preserve"><value>Command class</value></data>
+  <data name="DiagnosticModeDebug.Content" xml:space="preserve"><value>Debug allowlist</value></data>
+  <data name="DiagnosticModeInternal.Content" xml:space="preserve"><value>Internal allowlist</value></data>
+  <data name="DiagnosticCommand.Header" xml:space="preserve"><value>Report</value></data>
+  <data name="DiagnosticRumble.Header" xml:space="preserve"><value>Rumble (4 bytes)</value></data>
+  <data name="DiagnosticSubcommand.Header" xml:space="preserve"><value>Subcommand</value></data>
+  <data name="DiagnosticArguments.Header" xml:space="preserve"><value>Arguments (hex)</value></data>
+  <data name="SendDiagnostic.Content" xml:space="preserve"><value>Send</value></data>
+  <data name="DiagnosticReply.Header" xml:space="preserve"><value>Reply</value></data>
+  <data name="InternalPresetsHeader.Text" xml:space="preserve"><value>Internal actions</value></data>
+  <data name="InternalPresetsWarning.Text" xml:space="preserve"><value>These actions can change pairing or shipment state. Each action requires confirmation.</value></data>
+  <data name="SetShipment.Content" xml:space="preserve"><value>Set shipment mode</value></data>
+  <data name="ClearPairing.Content" xml:space="preserve"><value>Clear pairing data</value></data>
+  <data name="RebootPairing.Content" xml:space="preserve"><value>Reboot into pairing</value></data>
+  <data name="ConfirmInternalCommandTitle" xml:space="preserve"><value>Run internal controller action?</value></data>
+  <data name="SetShipmentConfirm" xml:space="preserve"><value>This writes the shipment-state command to the selected controller.</value></data>
+  <data name="ClearPairingConfirm" xml:space="preserve"><value>This clears controller pairing data and requires pairing again.</value></data>
+  <data name="RebootPairingConfirm" xml:space="preserve"><value>This reboots the selected controller and requests pairing mode.</value></data>
+  <data name="DiagnosticEnvironmentFormat" xml:space="preserve"><value>Process {0} · Windows {1} · effective DPI {2} · base {3}</value></data>
+  <data name="EnvironmentHeader.Text" xml:space="preserve"><value>Runtime environment</value></data>
+  <data name="DiagnosticSafetyNote.Text" xml:space="preserve"><value>Only commands in the native hardware-safe allowlist are accepted. Firmware-update, SPI-write, and arbitrary MCU payloads are rejected before HID output.</value></data>
+  <data name="DiagnosticByteInvalid" xml:space="preserve"><value>Report and subcommand must be one hexadecimal byte</value></data>
+  <data name="DiagnosticHexInvalid" xml:space="preserve"><value>Use space-separated two-digit hexadecimal bytes within the allowed length</value></data>
+  <data name="DiagnosticAccepted" xml:space="preserve"><value>Diagnostic command accepted</value></data>
+  <data name="DiagnosticReplyReceived" xml:space="preserve"><value>Diagnostic reply received</value></data>
+  <data name="DiagnosticOperationFailedFormat" xml:space="preserve"><value>Diagnostic command failed ({0})</value></data>
+  <data name="DiagnosticSentLabel" xml:space="preserve"><value>Sent</value></data>
+  <data name="DiagnosticReceivedLabel" xml:space="preserve"><value>Received</value></data>
+  <data name="DiagnosticNoReply" xml:space="preserve"><value>No reply</value></data>
+  <data name="DiagnosticReplyStateFormat" xml:space="preserve"><value>Matched: {0} · Accepted: {1}</value></data>
+  <data name="RunHardwarePreflight.Content" xml:space="preserve"><value>Run hardware preflight</value></data>
+  <data name="HardwarePreflightRunning" xml:space="preserve"><value>Running hardware preflight...</value></data>
+  <data name="HardwarePreflightPassed" xml:space="preserve"><value>Hardware preflight passed</value></data>
+  <data name="HardwarePreflightFailedFormat" xml:space="preserve"><value>Hardware preflight failed ({0}): {1}</value></data>
+  <data name="HardwarePreflightInputStep" xml:space="preserve"><value>controller input</value></data>
+  <data name="HardwarePreflightSpiStep" xml:space="preserve"><value>SPI read</value></data>
+  <data name="HardwarePreflightDiagnosticStep" xml:space="preserve"><value>safe diagnostic command</value></data>
+  <data name="HardwarePreflightAllowlistStep" xml:space="preserve"><value>unsafe-command rejection</value></data>
+  <data name="HardwarePreflightIrStep" xml:space="preserve"><value>IR camera start/stop</value></data>
+  <data name="HardwarePreflightNfcStep" xml:space="preserve"><value>NFC cancellation</value></data>
+  <data name="FullRestoreFinalizing" xml:space="preserve"><value>Finalizing full restore...</value></data>
+  <data name="FullRestoreFinalized" xml:space="preserve"><value>Full restore finalization commands sent</value></data>
+  <data name="FinalizeRestore.Content" xml:space="preserve"><value>Finalize: shipment + pairing reset + reboot</value></data>
+  <data name="ConfirmFullRestoreFinalizeTitle" xml:space="preserve"><value>Finalize full restore?</value></data>
+  <data name="FullRestoreFinalizeWarning" xml:space="preserve"><value>This sends the legacy internal sequence: set shipment state, clear pairing data, then reboot into pairing mode. The controller will need to be paired again.</value></data>
+</root>

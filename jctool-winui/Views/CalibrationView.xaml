@@ -1,0 +1,217 @@
+<UserControl
+    x:Class="JcTool.WinUI.Views.CalibrationView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:services="using:JcTool.WinUI.Services">
+
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled"
+                  VerticalScrollBarVisibility="Auto">
+        <Grid MaxWidth="1180"
+              Padding="32,28,32,40"
+              HorizontalAlignment="Stretch">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="16" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock services:Localized.Key="CalibrationHeader.Text"
+                           Style="{StaticResource SectionTitleStyle}"
+                           FontSize="28" />
+                <Button Grid.Column="1"
+                        IsEnabled="{x:Bind ViewModel.HasSelectedController, Mode=OneWay}"
+                        Click="ReadCalibrationButton_Click">
+                    <StackPanel Orientation="Horizontal" Spacing="8">
+                        <FontIcon Glyph="&#xE72C;" FontSize="15" />
+                        <TextBlock services:Localized.Key="ReadCalibration.Content" />
+                    </StackPanel>
+                </Button>
+            </Grid>
+
+            <Grid x:Name="CalibrationGrid"
+                  Grid.Row="2"
+                  ColumnSpacing="16"
+                  RowSpacing="16">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition x:Name="LeftColumn" Width="*" />
+                    <ColumnDefinition x:Name="RightColumn" Width="*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <Border x:Name="LeftStickPanel" Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock services:Localized.Key="LeftStickHeader.Text"
+                                       FontSize="17"
+                                       FontWeight="SemiBold" />
+                            <ToggleSwitch x:Name="EnableLeftStick"
+                                          Grid.Column="1"
+                                          MinWidth="84" />
+                        </Grid>
+                        <Grid ColumnSpacing="8" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="1" services:Localized.Key="Minimum.Text" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Column="2" services:Localized.Key="Center.Text" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Column="3" services:Localized.Key="Maximum.Text" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="X" />
+                            <NumberBox x:Name="LeftXMin" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="LeftXCenter" Grid.Row="1" Grid.Column="2" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="LeftXMax" Grid.Row="1" Grid.Column="3" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Y" />
+                            <NumberBox x:Name="LeftYMin" Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="LeftYCenter" Grid.Row="2" Grid.Column="2" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="LeftYMax" Grid.Row="2" Grid.Column="3" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="RightStickPanel" Grid.Column="1" Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock services:Localized.Key="RightStickHeader.Text"
+                                       FontSize="17"
+                                       FontWeight="SemiBold" />
+                            <ToggleSwitch x:Name="EnableRightStick"
+                                          Grid.Column="1"
+                                          MinWidth="84" />
+                        </Grid>
+                        <Grid ColumnSpacing="8" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="32" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="1" services:Localized.Key="Minimum.Text" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Column="2" services:Localized.Key="Center.Text" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Column="3" services:Localized.Key="Maximum.Text" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Row="1" VerticalAlignment="Center" Text="X" />
+                            <NumberBox x:Name="RightXMin" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="RightXCenter" Grid.Row="1" Grid.Column="2" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="RightXMax" Grid.Row="1" Grid.Column="3" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <TextBlock Grid.Row="2" VerticalAlignment="Center" Text="Y" />
+                            <NumberBox x:Name="RightYMin" Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="RightYCenter" Grid.Row="2" Grid.Column="2" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                            <NumberBox x:Name="RightYMax" Grid.Row="2" Grid.Column="3" Minimum="0" Maximum="4095" SpinButtonPlacementMode="Compact" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="SensorPanel" Grid.Row="1" Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <TextBlock services:Localized.Key="SensorHeader.Text"
+                                       FontSize="17"
+                                       FontWeight="SemiBold" />
+                            <ToggleSwitch x:Name="EnableSensor" Grid.Column="1" MinWidth="84" />
+                        </Grid>
+                        <Grid ColumnSpacing="8" RowSpacing="8">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="72" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <TextBlock Grid.Column="1" Text="X" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Column="2" Text="Y" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Column="3" Text="Z" HorizontalAlignment="Center" />
+                            <TextBlock Grid.Row="1" services:Localized.Key="Accelerometer.Text" VerticalAlignment="Center" />
+                            <NumberBox x:Name="AccX" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="65535" />
+                            <NumberBox x:Name="AccY" Grid.Row="1" Grid.Column="2" Minimum="0" Maximum="65535" />
+                            <NumberBox x:Name="AccZ" Grid.Row="1" Grid.Column="3" Minimum="0" Maximum="65535" />
+                            <TextBlock Grid.Row="2" services:Localized.Key="Gyroscope.Text" VerticalAlignment="Center" />
+                            <NumberBox x:Name="GyroX" Grid.Row="2" Grid.Column="1" Minimum="0" Maximum="65535" />
+                            <NumberBox x:Name="GyroY" Grid.Row="2" Grid.Column="2" Minimum="0" Maximum="65535" />
+                            <NumberBox x:Name="GyroZ" Grid.Row="2" Grid.Column="3" Minimum="0" Maximum="65535" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+
+                <Border x:Name="ParametersPanel" Grid.Row="1" Grid.Column="1" Style="{StaticResource PanelBorderStyle}">
+                    <StackPanel Spacing="14">
+                        <TextBlock services:Localized.Key="StickParametersHeader.Text"
+                                   FontSize="17"
+                                   FontWeight="SemiBold" />
+                        <Grid ColumnSpacing="10" RowSpacing="10">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="*" />
+                            </Grid.ColumnDefinitions>
+                            <NumberBox x:Name="PrimaryDeadzone" services:Localized.Key="Deadzone.Header" Minimum="0" Maximum="4095" />
+                            <NumberBox x:Name="PrimaryRange" services:Localized.Key="RangeRatio.Header" Grid.Column="1" Minimum="0" Maximum="4095" />
+                            <NumberBox x:Name="SecondaryDeadzone" services:Localized.Key="SecondDeadzone.Header" Grid.Row="1" Minimum="0" Maximum="4095" />
+                            <NumberBox x:Name="SecondaryRange" services:Localized.Key="SecondRangeRatio.Header" Grid.Row="1" Grid.Column="1" Minimum="0" Maximum="4095" />
+                        </Grid>
+                    </StackPanel>
+                </Border>
+            </Grid>
+
+            <Grid Grid.Row="4" ColumnSpacing="10">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="ValidationStatus"
+                           VerticalAlignment="Center"
+                           Foreground="{StaticResource TextSecondaryBrush}"
+                           TextWrapping="Wrap" />
+                <Button x:Name="WriteParametersButton"
+                        Grid.Column="1"
+                        services:Localized.Key="WriteParameters.Content"
+                        IsEnabled="False"
+                        Click="WriteParametersButton_Click" />
+                <Button x:Name="WriteCalibrationButton"
+                        Grid.Column="2"
+                        services:Localized.Key="WriteCalibration.Content"
+                        Style="{StaticResource PrimaryButtonStyle}"
+                        IsEnabled="False"
+                        Click="WriteCalibrationButton_Click" />
+            </Grid>
+        </Grid>
+    </ScrollViewer>
+</UserControl>

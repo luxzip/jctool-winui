@@ -33,6 +33,10 @@ native bridge is built for x86. The source tree intentionally keeps the
 original `jctool` directory because the WinUI and native projects reuse its
 HID API and simulator sources.
 
+The self-contained package includes the .NET and Windows App SDK runtime. It
+still requires the Microsoft Visual C++ x86 Redistributable for the native
+HID bridge.
+
 ## Hardware preflight
 
 Run this before any write operation. It checks controller input, SPI read,
